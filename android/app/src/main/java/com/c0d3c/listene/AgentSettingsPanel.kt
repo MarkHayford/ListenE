@@ -339,7 +339,7 @@ private fun AboutDialog(onClose: () -> Unit) {
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
                 Text(
-                    "gaoxingyu2006@icloud.com",
+                    "markhayford816@icloud.com",
                     style = MaterialTheme.typography.labelMedium,
                     fontWeight = FontWeight.SemiBold,
                     color = MaterialTheme.colorScheme.onSurface,
@@ -348,7 +348,7 @@ private fun AboutDialog(onClose: () -> Unit) {
                         .clickable {
                             runCatching {
                                 ctx.startActivity(
-                                    Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:gaoxingyu2006@icloud.com"))
+                                    Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:markhayford816@icloud.com"))
                                         .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                                 )
                             }
