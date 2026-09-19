@@ -1,0 +1,1616 @@
+{
+  "model": "mimo-v2.5-pro",
+  "summary": {
+    "total": 39,
+    "primaryHits": 38,
+    "softHits": 38,
+    "forbidHits": 0,
+    "errors": 0,
+    "primaryRate": 0.9744,
+    "softRate": 0.9744,
+    "forbidRate": 0
+  },
+  "cases": [
+    {
+      "id": "vocab-flashcard",
+      "message": "帮我记这几个新单词：diligent、curious、generous，想要能点开看中文意思的记忆卡",
+      "expect": [
+        "flashcard",
+        "pairs_memory"
+      ],
+      "card": {
+        "title": "新单词记忆卡",
+        "nodes": [
+          {
+            "type": "flashcard",
+            "cards": [
+              {
+                "front": "diligent",
+                "back": "勤奋的；勤勉的"
+              },
+              {
+                "front": "curious",
+                "back": "好奇的；求知欲强的"
+              },
+              {
+                "front": "generous",
+                "back": "慷慨的；大方的"
+              }
+            ]
+          }
+        ]
+      },
+      "score": {
+        "primary": "flashcard",
+        "present": [
+          "flashcard"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "vocab-odd-one-out",
+      "message": "apple、banana、carrot、orange 里哪个跟其他不是一类？出成一道练习",
+      "expect": [
+        "odd_one_out"
+      ],
+      "card": {
+        "title": "哪个不是一类？",
+        "nodes": [
+          {
+            "type": "odd_one_out",
+            "prompt": "下列哪一项与其他不是同一类别？",
+            "items": [
+              "apple",
+              "banana",
+              "carrot",
+              "orange"
+            ],
+            "answer": "carrot",
+            "explanation": "apple、banana、orange 都是水果（fruit），而 carrot（胡萝卜）是蔬菜（vegetable），因此 carrot 是异类。"
+          }
+        ]
+      },
+      "score": {
+        "primary": "odd_one_out",
+        "present": [
+          "odd_one_out"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "vocab-categorize",
+      "message": "把这些词按词性分到动词/名词/形容词三类：run、happiness、beautiful、eat、cat",
+      "expect": [
+        "categorize"
+      ],
+      "card": {
+        "title": "词性分类练习",
+        "nodes": [
+          {
+            "type": "categorize",
+            "prompt": "将下列单词按词性归入三个类别：动词、名词、形容词",
+            "categories": [
+              {
+                "name": "动词",
+                "items": [
+                  "run",
+                  "eat"
+                ]
+              },
+              {
+                "name": "名词",
+                "items": [
+                  "happiness",
+                  "cat"
+                ]
+              },
+              {
+                "name": "形容词",
+                "items": [
+                  "beautiful"
+                ]
+              }
+            ],
+            "explanation": "run(跑)和eat(吃)是动作，属于动词；happiness(幸福)是抽象名词，cat(猫)是具体名词；beautiful(美丽的)描述性质，是形容词。"
+          }
+        ]
+      },
+      "score": {
+        "primary": "categorize",
+        "present": [
+          "categorize"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "vocab-rank-order",
+      "message": "把 freezing、cold、warm、hot 按从冷到热排序，做成练习",
+      "expect": [
+        "rank_order"
+      ],
+      "card": {
+        "title": "温度词排序：从冷到热",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "请将下列温度词按从冷到热的程度顺序排列。",
+            "role": "title"
+          },
+          {
+            "type": "rank_order",
+            "prompt": "将以下温度词按从冷到热的顺序排列：",
+            "items": [
+              "freezing",
+              "cold",
+              "warm",
+              "hot"
+            ],
+            "from": "最冷",
+            "to": "最热",
+            "explanation": "温度程度从低到高依次为：freezing（冰冻的，极冷）→ cold（冷的）→ warm（温暖的）→ hot（热的）。"
+          }
+        ]
+      },
+      "score": {
+        "primary": "rank_order",
+        "present": [
+          "rank_order"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "vocab-game",
+      "message": "来个复习动物单词的小游戏，轻松一点",
+      "expect": [
+        "word_search",
+        "hangman",
+        "pairs_memory"
+      ],
+      "card": {
+        "title": "动物单词趣味复习",
+        "nodes": [
+          {
+            "type": "flashcard",
+            "prompt": "翻卡片认动物，轻松记忆！",
+            "cards": [
+              {
+                "front": "🐱",
+                "back": "cat - 猫"
+              },
+              {
+                "front": "🐶",
+                "back": "dog - 狗"
+              },
+              {
+                "front": "🐼",
+                "back": "panda - 熊猫"
+              },
+              {
+                "front": "🦁",
+                "back": "lion - 狮子"
+              },
+              {
+                "front": "🐘",
+                "back": "elephant - 大象"
+              },
+              {
+                "front": "🦋",
+                "back": "butterfly - 蝴蝶"
+              }
+            ]
+          }
+        ]
+      },
+      "score": {
+        "primary": "flashcard",
+        "present": [
+          "flashcard"
+        ],
+        "primaryHit": false,
+        "softHit": false,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "spell-spelling-bee",
+      "message": "听发音把单词 necessary 一个字母一个字母拼出来",
+      "expect": [
+        "spelling_bee"
+      ],
+      "card": {
+        "title": "Spelling Bee: necessary",
+        "nodes": [
+          {
+            "type": "spelling_bee",
+            "word": "necessary",
+            "hint": "必要的",
+            "example": "It is necessary to study hard."
+          }
+        ]
+      },
+      "score": {
+        "primary": "spelling_bee",
+        "present": [
+          "spelling_bee"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "spell-scramble",
+      "message": "把打乱的字母 u-t-b-e-a-f-i-l 拼回正确的单词",
+      "expect": [
+        "word_scramble"
+      ],
+      "card": {
+        "title": "字母重组练习",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "将下列打乱的字母重新排列，拼出正确的英文单词。",
+            "role": "title"
+          },
+          {
+            "type": "word_scramble",
+            "word": "beautiful",
+            "hint": "美丽的，漂亮的",
+            "scrambled": [
+              "u",
+              "t",
+              "b",
+              "e",
+              "a",
+              "f",
+              "i",
+              "l"
+            ]
+          }
+        ]
+      },
+      "score": {
+        "primary": "word_scramble",
+        "present": [
+          "word_scramble"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "spell-word-formation",
+      "message": "构词练习：给 happy、care、success，让我写出对应的名词或形容词形式",
+      "expect": [
+        "word_formation"
+      ],
+      "card": {
+        "title": "构词转换：形容词/名词派生",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "将下列单词转换为指定的词性形式。",
+            "role": "title"
+          },
+          {
+            "type": "word_formation",
+            "prompt": "根据提示，写出正确的派生词。",
+            "items": [
+              {
+                "base": "happy",
+                "target": "名词",
+                "answer": "happiness"
+              },
+              {
+                "base": "care",
+                "target": "形容词（小心的）",
+                "answer": "careful"
+              },
+              {
+                "base": "success",
+                "target": "形容词",
+                "answer": "successful"
+              }
+            ],
+            "bank": [
+              "happiness",
+              "careful",
+              "successful",
+              "happily",
+              "careless",
+              "succeed"
+            ]
+          }
+        ]
+      },
+      "score": {
+        "primary": "word_formation",
+        "present": [
+          "word_formation"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "listen-dictation",
+      "message": "给我整句听写：读一句话，我把整句打出来",
+      "expect": [
+        "dictation"
+      ],
+      "card": {
+        "title": "整句听写",
+        "nodes": [
+          {
+            "type": "dictation",
+            "text": "The quick brown fox jumps over the lazy dog.",
+            "hint": "提示：包含所有26个字母的英文常用句子"
+          }
+        ]
+      },
+      "score": {
+        "primary": "dictation",
+        "present": [
+          "dictation"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "gram-open-cloze",
+      "message": "介词填空练习，不要给选项，我自己打字填：I'm good ___ English and I have ___ apple.",
+      "expect": [
+        "open_cloze"
+      ],
+      "card": {
+        "title": "介词填空练习",
+        "nodes": [
+          {
+            "type": "open_cloze",
+            "prompt": "填入合适的介词，注意固定搭配",
+            "text": "I'm good ___ English and I have ___ apple.",
+            "answers": [
+              "at",
+              "an"
+            ]
+          }
+        ]
+      },
+      "score": {
+        "primary": "open_cloze",
+        "present": [
+          "open_cloze"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "gram-cloze-select",
+      "message": "完形填空，每个空给我三个选项选一个",
+      "expect": [
+        "cloze_select"
+      ],
+      "card": {
+        "title": "完形填空练习",
+        "nodes": [
+          {
+            "type": "passage",
+            "text": "Last summer, my family and I went to the beach for a vacation. The weather was perfect, and we had a wonderful time. We ___1___ a big sandcastle near the water. Later, my brother ___2___ into the sea and started swimming. It was a bit cold, but he didn't mind. After that, we all ___3___ some ice cream from a nearby shop. It was a delicious end to a great day."
+          },
+          {
+            "type": "cloze_select",
+            "text": "Last summer, my family and I went to the beach for a vacation. The weather was perfect, and we had a wonderful time. We ___ a big sandcastle near the water. Later, my brother ___ into the sea and started swimming. It was a bit cold, but he didn't mind. After that, we all ___ some ice cream from a nearby shop. It was a delicious end to a great day.",
+            "blanks": [
+              {
+                "options": [
+                  "built",
+                  "make",
+                  "do"
+                ],
+                "answer": "built"
+              },
+              {
+                "options": [
+                  "jumped",
+                  "run",
+                  "walk"
+                ],
+                "answer": "jumped"
+              },
+              {
+                "options": [
+                  "eat",
+                  "ate",
+                  "eating"
+                ],
+                "answer": "ate"
+              }
+            ],
+            "explanation": "1. 'built' 是 build 的过去式，意为‘建造’，与 sandcastle 搭配正确。\n2. 'jumped into' 是固定搭配，表示‘跳进’水中。\n3. 'ate' 是 eat 的过去式，与上下文时态一致。"
+          }
+        ]
+      },
+      "score": {
+        "primary": "cloze_select",
+        "present": [
+          "cloze_select"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "gram-cloze-drag",
+      "message": "一段话挖几个空，从下面一个共享词库点词填进去",
+      "expect": [
+        "cloze_drag",
+        "cloze_select"
+      ],
+      "card": {
+        "title": "介词与连词填空",
+        "nodes": [
+          {
+            "type": "passage",
+            "text": "Read the passage and fill in the blanks with the correct words from the bank."
+          },
+          {
+            "type": "cloze_drag",
+            "text": "The teacher asked the students to hand ___ their homework ___ the end of the class. They were all very nervous ___ the results would be announced the next day.",
+            "bank": [
+              "in",
+              "on",
+              "at",
+              "for",
+              "but",
+              "so",
+              "and",
+              "because"
+            ],
+            "answers": [
+              "in",
+              "at",
+              "because"
+            ],
+            "explanation": "1. 'hand in' 是固定搭配，意为“提交”。\n2. 'at the end of' 是固定搭配，意为“在……结束时”。\n3. 'because' 引导原因状语从句，解释他们紧张的原因。"
+          }
+        ]
+      },
+      "score": {
+        "primary": "cloze_drag",
+        "present": [
+          "cloze_drag"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "gram-sentence-transform",
+      "message": "把这句改成被动语态：He wrote the book.",
+      "expect": [
+        "sentence_transform"
+      ],
+      "card": {
+        "title": "被动语态转换",
+        "nodes": [
+          {
+            "type": "sentence_transform",
+            "prompt": "改为被动语态",
+            "source": "He wrote the book.",
+            "answer": "The book was written by him.",
+            "accept": [
+              "The book was written by him"
+            ],
+            "hint": "被动语态结构：be动词 + 过去分词 + by + 宾语"
+          }
+        ]
+      },
+      "score": {
+        "primary": "sentence_transform",
+        "present": [
+          "sentence_transform"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "gram-order",
+      "message": "连词成句：to / school / I / go / every day",
+      "expect": [
+        "order"
+      ],
+      "card": {
+        "title": "连词成句",
+        "nodes": [
+          {
+            "type": "order",
+            "prompt": "将下列单词排列成正确的句子",
+            "items": [
+              "to",
+              "school",
+              "I",
+              "go",
+              "every day"
+            ],
+            "answer": "I go to school every day",
+            "explanation": "主语I + 谓语go + 方向to school + 时间状语every day，构成简单陈述句。"
+          }
+        ]
+      },
+      "score": {
+        "primary": "order",
+        "present": [
+          "order"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "gram-reorder-paragraph",
+      "message": "把这几句打乱的句子排成通顺的一段话",
+      "expect": [
+        "reorder_paragraph"
+      ],
+      "card": {
+        "title": "句子排序练习",
+        "nodes": [
+          {
+            "type": "reorder_paragraph",
+            "prompt": "请将下列句子排列成一段通顺连贯的短文：",
+            "sentences": [
+              "It was a beautiful sunny morning.",
+              "Mary decided to go for a walk in the park.",
+              "She brought her dog along for company.",
+              "They enjoyed the fresh air and birdsong.",
+              "After an hour, they headed home feeling refreshed."
+            ]
+          }
+        ]
+      },
+      "score": {
+        "primary": "reorder_paragraph",
+        "present": [
+          "reorder_paragraph"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "gram-true-false",
+      "message": "出几道判断题，判断这些英语语法说法对还是错",
+      "expect": [
+        "true_false"
+      ],
+      "card": {
+        "title": "英语语法判断题",
+        "nodes": [
+          {
+            "type": "true_false",
+            "prompt": "判断以下关于英语语法的说法是否正确",
+            "statements": [
+              {
+                "text": "现在完成时可以和表示过去具体时间的状语连用，如 yesterday, last week 等。",
+                "answer": "false"
+              },
+              {
+                "text": "'Few' 和 'a few' 都修饰可数名词，但 'few' 带有否定含义，表示'几乎没有'。",
+                "answer": "true"
+              },
+              {
+                "text": "在被动语态中，主动句的宾语变为被动句的主语，主动句的主语变为 by 介词短语。",
+                "answer": "true"
+              },
+              {
+                "text": "'Used to do something' 表示过去常常做某事，其否定形式是 'usedn't to do' 或 'didn't use to do'。",
+                "answer": "true"
+              },
+              {
+                "text": "形容词的比较级前面必须加 'more'，如 'more beautiful'。",
+                "answer": "false"
+              }
+            ],
+            "explanation": "1. 错误。现在完成时不能与表示过去具体时间的状语连用，应使用一般过去时。2. 正确。few 表否定（几乎没有），a few 表肯定（一些），都修饰可数名词。3. 正确。这是被动语态的基本转换规则。4. 正确。used to 的否定式有两种：usedn't to do 和 didn't use to do。5. 错误。多音节形容词用 more，单音节形容词通常直接加 -er，如 bigger。"
+          }
+        ]
+      },
+      "score": {
+        "primary": "true_false",
+        "present": [
+          "true_false"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "gram-sentence-diagram",
+      "message": "分析句子成分，标出 She reads books 里每个词是主语、谓语还是宾语",
+      "expect": [
+        "sentence_diagram"
+      ],
+      "card": {
+        "title": "句子成分分析：She reads books",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "句子成分分析：把句子切成词/短语，并标出每个成分的语法角色（主语、谓语、宾语）。",
+            "role": "title"
+          },
+          {
+            "type": "sentence_diagram",
+            "prompt": "请将下列句子的每个词标注为其正确的语法成分：",
+            "sentence": "She reads books",
+            "labels": [
+              "主语",
+              "谓语",
+              "宾语"
+            ],
+            "items": [
+              {
+                "text": "She",
+                "label": "主语"
+              },
+              {
+                "text": "reads",
+                "label": "谓语"
+              },
+              {
+                "text": "books",
+                "label": "宾语"
+              }
+            ]
+          }
+        ]
+      },
+      "score": {
+        "primary": "sentence_diagram",
+        "present": [
+          "sentence_diagram"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "gram-tokens",
+      "message": "找出并点出这句里用错的词：She go to school every day.",
+      "expect": [
+        "tokens"
+      ],
+      "card": {
+        "title": "找错词：主谓一致",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "请找出下面句子中用错的词（点选它）。",
+            "role": "body"
+          },
+          {
+            "type": "tokens",
+            "text": "She go to school every day.",
+            "correct": "She goes to school every day.",
+            "errors": [
+              "go"
+            ],
+            "explanation": "主语 She 是第三人称单数，谓语动词需加 -s，应为 goes。"
+          }
+        ]
+      },
+      "score": {
+        "primary": "tokens",
+        "present": [
+          "tokens"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "gram-error-correction",
+      "message": "改错：把 She go to school yesterday 改成正确的整句写出来",
+      "expect": [
+        "error_correction"
+      ],
+      "card": {
+        "title": "句子改错练习",
+        "nodes": [
+          {
+            "type": "error_correction",
+            "prompt": "找出句子中的语法错误并改正，写出正确的整句。",
+            "sentence": "She go to school yesterday",
+            "answer": "She went to school yesterday",
+            "explanation": "句子描述的是'yesterday'（昨天）发生的动作，需要用一般过去时。'go'的过去式是'went'，因此正确的句子是 'She went to school yesterday'。"
+          }
+        ]
+      },
+      "score": {
+        "primary": "error_correction",
+        "present": [
+          "error_correction"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "gram-proof-paragraph",
+      "message": "高考短文改错：给一段话，每行可能有一处错，让我逐行改",
+      "expect": [
+        "proof_paragraph"
+      ],
+      "card": {
+        "title": "短文改错练习",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "以下短文共有10处错误（每行至多一处）。请逐行改正，每行输入修正后的完整句子。",
+            "role": "title"
+          },
+          {
+            "type": "proof_paragraph",
+            "prompt": "短文改错：每行可能含一处错（多词/少词/错词），无错行请原样保留。请直接在输入框中改正。",
+            "lines": [
+              {
+                "text": "I still remember the day when we first met.",
+                "answer": "I still remember the day when we first met."
+              },
+              {
+                "text": "It was in a sunny morning of September.",
+                "answer": "It was on a sunny morning of September."
+              },
+              {
+                "text": "I was standing at the school gate, waited for my friend.",
+                "answer": "I was standing at the school gate, waiting for my friend."
+              },
+              {
+                "text": "Sudden, a girl with long hair came up to me.",
+                "answer": "Suddenly, a girl with long hair came up to me."
+              },
+              {
+                "text": "She asked me that I could help her find the library.",
+                "answer": "She asked me if/whether I could help her find the library."
+              },
+              {
+                "text": "I was very glad to help because I was not shy at all.",
+                "answer": "I was very glad to help because I was not shy at all."
+              },
+              {
+                "text": "We walked and talked, found we had a lot in common.",
+                "answer": "We walked and talked, finding we had a lot in common."
+              },
+              {
+                "text": "She told me she come from a small town nearby.",
+                "answer": "She told me she came from a small town nearby."
+              },
+              {
+                "text": "Before we knew it, we had became good friends.",
+                "answer": "Before we knew it, we had become good friends."
+              },
+              {
+                "text": "Now she is one of my the closest friends.",
+                "answer": "Now she is one of my closest friends."
+              },
+              {
+                "text": "I feel luckily to have met her that day.",
+                "answer": "I feel lucky to have met her that day."
+              }
+            ]
+          }
+        ]
+      },
+      "score": {
+        "primary": "proof_paragraph",
+        "present": [
+          "proof_paragraph"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "gram-fill-table",
+      "message": "动词过去式表格填空：give、go、eat，把过去式那一列挖空让我填",
+      "expect": [
+        "fill_table"
+      ],
+      "card": {
+        "title": "动词过去式填空",
+        "nodes": [
+          {
+            "type": "fill_table",
+            "title": "动词过去式",
+            "headers": [
+              "动词原形",
+              "过去式"
+            ],
+            "rows": [
+              [
+                "give",
+                "gave"
+              ],
+              [
+                "go",
+                "went"
+              ],
+              [
+                "eat",
+                "ate"
+              ]
+            ],
+            "blanks": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      "score": {
+        "primary": "fill_table",
+        "present": [
+          "fill_table"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "listen-fill",
+      "message": "听一句话，把缺的词从词库里点出来填空",
+      "expect": [
+        "listen_fill"
+      ],
+      "card": {
+        "title": "听力填空练习",
+        "nodes": [
+          {
+            "type": "listen_fill",
+            "audioText": "She has been studying English for five years.",
+            "text": "She has been studying English for ___ years.",
+            "bank": [
+              "three",
+              "five",
+              "eight",
+              "ten"
+            ],
+            "answers": [
+              "five"
+            ]
+          }
+        ]
+      },
+      "score": {
+        "primary": "listen_fill",
+        "present": [
+          "listen_fill"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "listen-cloze",
+      "message": "听一句话，把缺的词自己打字填出来，不给词库",
+      "expect": [
+        "listen_cloze"
+      ],
+      "card": {
+        "title": "听力填空练习",
+        "nodes": [
+          {
+            "type": "listen_cloze",
+            "audioText": "The quick brown fox jumps over the lazy dog.",
+            "text": "The quick brown fox ___ over the lazy dog.",
+            "answers": [
+              "jumps"
+            ]
+          }
+        ]
+      },
+      "score": {
+        "primary": "listen_cloze",
+        "present": [
+          "listen_cloze"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "listen-audio-choice",
+      "message": "辨音练习：读一个词，我判断听到的是 ship 还是 sheep",
+      "expect": [
+        "audio_choice"
+      ],
+      "card": {
+        "title": "Ship vs Sheep 听辨练习",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "听发音，判断你听到的是 ship 还是 sheep。注意元音长短的区别：/ɪ/（短）vs /iː/（长）。",
+            "role": "body"
+          },
+          {
+            "type": "audio_choice",
+            "audioText": "ship",
+            "prompt": "你听到的是哪个词？",
+            "options": [
+              "ship",
+              "sheep"
+            ],
+            "answer": "ship",
+            "explanation": "ship /ʃɪp/ 中的元音是短元音 /ɪ/，嘴唇放松、开口略大；sheep /ʃiːp/ 是长元音 /iː/，嘴唇拉扁、舌位更高更前。两者是典型的最小对立对（minimal pair）。"
+          },
+          {
+            "type": "audio_choice",
+            "audioText": "sheep",
+            "prompt": "你听到的是哪个词？",
+            "options": [
+              "ship",
+              "sheep"
+            ],
+            "answer": "sheep",
+            "explanation": "sheep /ʃiːp/ 的元音 /iː/ 是长音，发音时嘴角向两侧拉伸、舌面前部抬高；ship /ʃɪp/ 的 /ɪ/ 则短促放松。多听几遍注意时长和舌位差异。"
+          },
+          {
+            "type": "audio_choice",
+            "audioText": "sheep",
+            "prompt": "你听到的是哪个词？",
+            "options": [
+              "ship",
+              "sheep"
+            ],
+            "answer": "sheep",
+            "explanation": "再次确认：sheep 的 /iː/ 持续时间更长、音质更紧；ship 的 /ɪ/ 一闪而过、音质松散。这是中国学习者最容易混淆的元音对立之一。"
+          }
+        ]
+      },
+      "score": {
+        "primary": "audio_choice",
+        "present": [
+          "audio_choice",
+          "audio_choice",
+          "audio_choice"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "speak-score",
+      "message": "我要练口语跟读，读一句话给我发音评分",
+      "expect": [
+        "speak_score"
+      ],
+      "card": {
+        "title": "口语跟读评分练习",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "请大声朗读以下句子，我会为你评分。",
+            "role": "title"
+          },
+          {
+            "type": "speak_score",
+            "text": "The quick brown fox jumps over the lazy dog.",
+            "prompts": [
+              "The quick brown fox jumps over the lazy dog."
+            ]
+          }
+        ]
+      },
+      "score": {
+        "primary": "speak_score",
+        "present": [
+          "speak_score"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "speak-roleplay",
+      "message": "模拟在咖啡店点单，跟我多轮对话练口语",
+      "expect": [
+        "roleplay_turn"
+      ],
+      "card": {
+        "title": "咖啡店点单口语模拟",
+        "nodes": [
+          {
+            "type": "roleplay_turn",
+            "scenario": "你是一名友好的咖啡店店员，我是来点单的顾客。用英语进行点单对话，注意礼貌用语和点餐常用句型。",
+            "opening": "Welcome to Bean There, Done That! What can I get for you today?",
+            "goal": "成功用英语完成一次咖啡店点单，包含选择饮品、确认规格（大小、温度等）、可能加甜点，并礼貌结账。",
+            "turns": 6
+          }
+        ]
+      },
+      "score": {
+        "primary": "roleplay_turn",
+        "present": [
+          "roleplay_turn"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "speak-stress",
+      "message": "练单词重音：banana 的重音在哪个音节",
+      "expect": [
+        "stress_mark"
+      ],
+      "card": {
+        "title": "单词重音练习：banana",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "单词重音练习",
+            "role": "title"
+          },
+          {
+            "type": "stress_mark",
+            "word": "banana",
+            "syllables": [
+              "ba",
+              "na",
+              "na"
+            ],
+            "stress": 2
+          }
+        ]
+      },
+      "score": {
+        "primary": "stress_mark",
+        "present": [
+          "stress_mark"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "read-tfng",
+      "message": "给一段短文，判断每句是 True、False 还是 Not Given",
+      "expect": [
+        "tfng"
+      ],
+      "card": {
+        "title": "阅读理解：True/False/Not Given 判断",
+        "nodes": [
+          {
+            "type": "passage",
+            "text": "In recent years, remote work has become increasingly popular. Many companies have adopted flexible working arrangements since the pandemic. Employees often report higher job satisfaction when working from home. However, some managers feel that productivity decreases without direct supervision. Studies show that remote workers tend to work longer hours than their office-based counterparts."
+          },
+          {
+            "type": "tfng",
+            "prompt": "根据上文，判断以下各句是否与材料内容相符。",
+            "statements": [
+              {
+                "text": "Remote work gained popularity before the pandemic.",
+                "answer": "not_given"
+              },
+              {
+                "text": "Flexible working arrangements were introduced by many companies during the pandemic.",
+                "answer": "true"
+              },
+              {
+                "text": "All employees prefer working from home.",
+                "answer": "false"
+              },
+              {
+                "text": "Managers unanimously agree that remote work boosts productivity.",
+                "answer": "false"
+              },
+              {
+                "text": "Remote workers typically work more hours than those in offices.",
+                "answer": "true"
+              }
+            ],
+            "explanation": "true = 材料明确支持；false = 材料明确矛盾；not_given = 材料未提及。注意区分 false（与原文相悖）和 not_given（原文根本没有讨论这一点）。"
+          }
+        ]
+      },
+      "score": {
+        "primary": "tfng",
+        "present": [
+          "tfng"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "read-match-headings",
+      "message": "雅思阅读：给几段文字和一批小标题，为每段选最合适的标题",
+      "expect": [
+        "match_headings"
+      ],
+      "card": {
+        "title": "雅思阅读段落标题匹配",
+        "nodes": [
+          {
+            "type": "passage",
+            "text": "A. The world's oceans are under unprecedented pressure from human activity. Overfishing, plastic pollution, and climate change are combining to create a perfect storm of threats to marine ecosystems. In particular, coral reefs, often called the 'rainforests of the sea', are experiencing widespread bleaching events due to rising water temperatures.\n\nB. However, there is growing hope on the horizon. Scientists and conservationists are developing innovative strategies to protect and restore marine environments. These include the creation of marine protected areas, coral gardening projects, and the use of biodegradable materials to replace single-use plastics. International cooperation through agreements like the UN Ocean Treaty is also crucial.\n\nC. One of the most promising approaches is the use of assisted evolution. Researchers are selectively breeding corals that are more resilient to heat stress, a technique known as 'assisted gene flow'. This method aims to help coral populations adapt to changing conditions faster than they could naturally. While still in experimental stages, early results are encouraging."
+          },
+          {
+            "type": "match_headings",
+            "prompt": "Read the three paragraphs (A, B, C) above about ocean conservation. Match each paragraph to the most suitable heading from the list below. Choose from the headings provided; one is a distractor.",
+            "paragraphs": [
+              {
+                "label": "A",
+                "text": "The world's oceans are under unprecedented pressure from human activity. Overfishing, plastic pollution, and climate change are combining to create a perfect storm of threats to marine ecosystems. In particular, coral reefs, often called the 'rainforests of the sea', are experiencing widespread bleaching events due to rising water temperatures.",
+                "answer": "Threats to Marine Ecosystems"
+              },
+              {
+                "label": "B",
+                "text": "However, there is growing hope on the horizon. Scientists and conservationists are developing innovative strategies to protect and restore marine environments. These include the creation of marine protected areas, coral gardening projects, and the use of biodegradable materials to replace single-use plastics. International cooperation through agreements like the UN Ocean Treaty is also crucial.",
+                "answer": "New Conservation Strategies"
+              },
+              {
+                "label": "C",
+                "text": "One of the most promising approaches is the use of assisted evolution. Researchers are selectively breeding corals that are more resilient to heat stress, a technique known as 'assisted gene flow'. This method aims to help coral populations adapt to changing conditions faster than they could naturally. While still in experimental stages, early results are encouraging.",
+                "answer": "Assisted Evolution for Coral Resilience"
+              }
+            ],
+            "headings": [
+              "Threats to Marine Ecosystems",
+              "New Conservation Strategies",
+              "Assisted Evolution for Coral Resilience",
+              "Global Economic Impacts of Ocean Pollution"
+            ],
+            "explanation": "The correct headings are based on the main topic of each paragraph. Paragraph A discusses multiple pressures on oceans (overfishing, pollution, climate change), so 'Threats to Marine Ecosystems' is the best fit. Paragraph B outlines solutions like protected areas and international agreements, matching 'New Conservation Strategies'. Paragraph C focuses specifically on breeding heat-resistant corals, which aligns with 'Assisted Evolution for Coral Resilience'. The distractor 'Global Economic Impacts' is not mentioned in any paragraph."
+          }
+        ]
+      },
+      "score": {
+        "primary": "match_headings",
+        "present": [
+          "match_headings"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "read-match-info",
+      "message": "雅思阅读：判断每条信息分别出现在 A/B/C 哪一段",
+      "expect": [
+        "match_info"
+      ],
+      "card": {
+        "title": "IELTS Reading: Matching Information",
+        "nodes": [
+          {
+            "type": "passage",
+            "text": "A. The concept of a 'carbon footprint' has become a central pillar in discussions about climate change. It refers to the total amount of greenhouse gases, including carbon dioxide and methane, that are generated by our actions. This metric allows individuals and organisations to quantify their impact on the environment, making it easier to set reduction targets.\n\nB. Calculating a carbon footprint involves summing emissions from various sources, such as transportation, energy use in homes and offices, and the production and disposal of goods. For example, a single transatlantic flight can add several tonnes of CO2 to a person's annual footprint. Tools like online calculators have made this process more accessible to the general public.\n\nC. Despite its widespread adoption, the carbon footprint concept has faced criticism. Some environmental scientists argue that it shifts the responsibility from large corporations and governments onto individual consumers. They contend that systemic changes in energy production and industrial policy are far more critical than personal lifestyle adjustments."
+          },
+          {
+            "type": "match_info",
+            "prompt": "Which paragraph (A, B, or C) contains the following information?",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ],
+            "statements": [
+              {
+                "text": "A practical example of an activity that significantly increases one's carbon footprint.",
+                "answer": "B"
+              },
+              {
+                "text": "An argument that personal carbon footprinting may distract from more important solutions.",
+                "answer": "C"
+              },
+              {
+                "text": "A definition of what a carbon footprint measures.",
+                "answer": "A"
+              }
+            ],
+            "explanation": "1. The transatlantic flight example is given in paragraph B.\n2. The criticism about shifting responsibility from corporations to individuals is in paragraph C.\n3. The definition ('total amount of greenhouse gases...') is provided in paragraph A."
+          }
+        ]
+      },
+      "score": {
+        "primary": "match_info",
+        "present": [
+          "match_info"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "read-highlight-span",
+      "message": "在这段话里把所有动词都圈出来",
+      "expect": [
+        "highlight_span"
+      ],
+      "card": {
+        "title": "圈出所有动词",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "阅读下面的短文，选出文中所有的动词。",
+            "role": "title"
+          },
+          {
+            "type": "highlight_span",
+            "prompt": "选出文中所有的动词",
+            "text": "The cat sat on the mat and watched the birds fly past the window while its owner slept peacefully in the next room.",
+            "answers": [
+              "sat",
+              "watched",
+              "fly",
+              "slept"
+            ],
+            "explanation": "本文的动词包括：sat（sit的过去式，坐）、watched（watch的过去式，观看）、fly（飞，不定式）、slept（sleep的过去式，睡觉）。其他词如 The/cat/on/the/and/birds/past/window/while/its/owner/peacefully/in/next/room 都是名词、代词、介词、冠词、连词或副词，不是动词。"
+          }
+        ]
+      },
+      "score": {
+        "primary": "highlight_span",
+        "present": [
+          "highlight_span"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "read-dialogue-complete",
+      "message": "给一段对话，让我从选项里选出最合适的下一句回应",
+      "expect": [
+        "dialogue_complete"
+      ],
+      "card": {
+        "title": "对话补全练习",
+        "nodes": [
+          {
+            "type": "dialogue_complete",
+            "prompt": "在咖啡馆点餐的场景",
+            "turns": [
+              {
+                "speaker": "店员",
+                "text": "Good morning! What can I get for you today?"
+              }
+            ],
+            "options": [
+              "I'd like a large coffee, please.",
+              "The weather is nice today.",
+              "Can you tell me the way to the bank?",
+              "I'm doing my homework."
+            ],
+            "answer": "I'd like a large coffee, please.",
+            "explanation": "根据情景（咖啡馆点餐）和店员的问话，最合适的回应是点餐。选项B谈论天气，选项C问路，选项D说写作业，均与场景不符。"
+          }
+        ]
+      },
+      "score": {
+        "primary": "dialogue_complete",
+        "present": [
+          "dialogue_complete"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "translate-zh2en",
+      "message": "汉译英练习：我每天走路去上学",
+      "expect": [
+        "translate"
+      ],
+      "card": {
+        "title": "汉译英练习",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "请将以下中文句子翻译成英文，注意时态和主谓一致。",
+            "role": "body"
+          },
+          {
+            "type": "translate",
+            "direction": "zh2en",
+            "source": "我每天走路去上学",
+            "answer": "I walk to school every day.",
+            "accept": [
+              "I go to school on foot every day.",
+              "I walk to school each day."
+            ]
+          }
+        ]
+      },
+      "score": {
+        "primary": "translate",
+        "present": [
+          "translate"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "vocab-hangman",
+      "message": "来个猜单词游戏，根据提示逐个猜字母，别用完机会",
+      "expect": [
+        "hangman"
+      ],
+      "card": {
+        "title": "猜单词游戏",
+        "nodes": [
+          {
+            "type": "hangman",
+            "word": "environment",
+            "hint": "环境、自然环境",
+            "maxWrong": 6
+          }
+        ]
+      },
+      "score": {
+        "primary": "hangman",
+        "present": [
+          "hangman"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "gram-timed",
+      "message": "限时抢答：倒计时里快速做选择题巩固时态",
+      "expect": [
+        "timed_challenge"
+      ],
+      "card": {
+        "title": "时态限时抢答",
+        "nodes": [
+          {
+            "type": "timed_challenge",
+            "prompt": "She ___ (study) English for three years before she moved to London.",
+            "options": [
+              "had been studying",
+              "has been studying",
+              "was studying",
+              "is studying"
+            ],
+            "answer": "had been studying",
+            "seconds": 15
+          },
+          {
+            "type": "timed_challenge",
+            "prompt": "I ___ (watch) TV when the phone rang.",
+            "options": [
+              "was watching",
+              "am watching",
+              "have been watching",
+              "watched"
+            ],
+            "answer": "was watching",
+            "seconds": 15
+          },
+          {
+            "type": "timed_challenge",
+            "prompt": "By next Friday, we ___ (complete) the project.",
+            "options": [
+              "will complete",
+              "will have completed",
+              "are completing",
+              "complete"
+            ],
+            "answer": "will have completed",
+            "seconds": 15
+          },
+          {
+            "type": "timed_challenge",
+            "prompt": "He ___ (work) at this company since 2010.",
+            "options": [
+              "worked",
+              "has been working",
+              "is working",
+              "was working"
+            ],
+            "answer": "has been working",
+            "seconds": 15
+          }
+        ]
+      },
+      "score": {
+        "primary": "timed_challenge",
+        "present": [
+          "timed_challenge",
+          "timed_challenge",
+          "timed_challenge",
+          "timed_challenge"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "gram-ai-hint",
+      "message": "给我一道难题，卡住时能逐步看提示，最后再揭示答案",
+      "expect": [
+        "ai_hint"
+      ],
+      "card": {
+        "title": "英语难题挑战",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "这道题考察虚拟语气中与过去事实相反的假设，属于高难度语法点。准备好了吗？",
+            "role": "body"
+          },
+          {
+            "type": "ai_hint",
+            "prompt": "If she _______ (study) harder last year, she would have passed the exam. 请填入study的正确形式。",
+            "hints": [
+              "这个句子表达的是对过去事实的假设，而事实是：她去年没有努力学习，所以没通过考试。",
+              "回忆一下，表示与过去事实相反的假设，if从句应该用什么时态？",
+              "与过去事实相反的假设，if从句用过去完成时（had + 过去分词）。"
+            ],
+            "answer": "had studied"
+          }
+        ]
+      },
+      "score": {
+        "primary": "ai_hint",
+        "present": [
+          "ai_hint"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "vocab-match",
+      "message": "把英文单词和中文意思连线配对：apple-苹果、banana-香蕉、cat-猫",
+      "expect": [
+        "match",
+        "pairs_memory"
+      ],
+      "card": {
+        "title": "英文单词与中文意思配对",
+        "nodes": [
+          {
+            "type": "match",
+            "prompt": "将左边的英文单词与右边的中文意思连线配对",
+            "pairs": [
+              {
+                "left": "apple",
+                "right": "苹果"
+              },
+              {
+                "left": "banana",
+                "right": "香蕉"
+              },
+              {
+                "left": "cat",
+                "right": "猫"
+              }
+            ],
+            "explanation": "配对依据：apple 是苹果，banana 是香蕉，cat 是猫。请根据单词的正确含义进行连线。"
+          }
+        ]
+      },
+      "score": {
+        "primary": "match",
+        "present": [
+          "match"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "write-email",
+      "message": "写作练习：让我写一封 80-100 词的英文道歉邮件，说明原因并提出补救安排，我自己输入正文",
+      "expect": [
+        "writing"
+      ],
+      "card": {
+        "title": "英文道歉邮件写作练习",
+        "nodes": [
+          {
+            "type": "writing",
+            "prompt": "请写一封 80–100 词的英文道歉邮件，邮件内容须包含以下要点：\n1. 对未能按时完成任务/赴约表示诚挚歉意；\n2. 说明造成延误的具体原因（如突发状况、健康问题等）；\n3. 提出明确的补救措施或替代安排（如新的截止日期、补偿方案等）；\n4. 表达希望对方理解并继续保持良好合作关系。\n\n注意：使用正式书信语气，结构清晰（开头问候→致歉→原因→补救→结尾），词数控制在 80–100 词之间。",
+            "reference": "评分参考要点：\n- 内容完整性：是否涵盖致歉、原因、补救安排、结尾客套四部分；\n- 语言得体性：是否使用正式语气、恰当道歉表达（I sincerely apologize, I regret...）；\n- 组织结构：是否有清晰段落划分，逻辑连贯；\n- 词汇语法：用词准确、句式多样、语法正确、拼写无误；\n- 词数：是否在 80–100 词范围内。"
+          }
+        ]
+      },
+      "score": {
+        "primary": "writing",
+        "present": [
+          "writing"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    },
+    {
+      "id": "write-essay",
+      "message": "给我一个 B1 作文题练写作，我写完你给我评分",
+      "expect": [
+        "writing"
+      ],
+      "card": {
+        "title": "B1 Writing Practice: A Memorable Trip",
+        "nodes": [
+          {
+            "type": "writing",
+            "prompt": "Write an essay of 100-120 words about a memorable trip you have taken. You should include:\n- Where you went and when\n- What you did there\n- Why it was memorable for you\n\nUse past tense and try to include descriptive language. Remember to organize your writing with a clear introduction, body, and conclusion.",
+            "reference": "Content: Describe destination, time, activities, and reasons for the trip being memorable (3 key points)\nOrganization: Clear introduction stating the trip, body paragraphs with details, concluding reflection\nVocabulary: Use of descriptive adjectives, travel-related vocabulary, varied word choice\nGrammar: Consistent past tense usage, correct sentence structure, appropriate use of connectors (and, but, because, so)"
+          }
+        ]
+      },
+      "score": {
+        "primary": "writing",
+        "present": [
+          "writing"
+        ],
+        "primaryHit": true,
+        "softHit": true,
+        "forbidHit": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+[
+  {
+    "id": "h-subjunctive-explain",
+    "message": "什么是虚拟语气？讲清楚就行",
+    "expectIntent": "chat",
+    "expectCardSpecNull": true,
+    "rubric": "纯讲解虚拟语气概念，不生成练习卡片"
+  },
+  {
+    "id": "h-subjunctive-examples",
+    "message": "虚拟语气怎么用？给我两个例句就行，别出题",
+    "expectIntent": "chat",
+    "expectCardSpecNull": true,
+    "rubric": "只在回复里给例句讲解，不生成任何练习卡片"
+  },
+  {
+    "id": "h-subjunctive-quiz",
+    "message": "出一道虚拟语气的选择题，4个选项",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["cloze"],
+    "forbidComponents": ["vocabulary", "examples", "word_family", "grammar"],
+    "rubric": "单题选择用 cloze 承载，4个选项，无多余模块"
+  },
+  {
+    "id": "h-vocab-exact-7",
+    "message": "给我7个关于科技的英语单词卡片",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["vocabulary"],
+    "minCounts": { "vocabulary": 7 },
+    "rubric": "vocabulary 组件恰好7个科技相关词"
+  },
+  {
+    "id": "h-qset-3-4opt",
+    "message": "出3道关于环境保护的选择题，每题四个选项",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["question_set"],
+    "forbidComponents": ["question_preview"],
+    "minCounts": { "question_set": 3 },
+    "rubric": "question_set 恰好3题，每题4选项，主题环保"
+  },
+  {
+    "id": "h-cloze-no-audio-no-grammar",
+    "message": "选词填空，5个空，主题科技，不要音频也不要语法讲解",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["cloze"],
+    "forbidComponents": ["grammar", "correction"],
+    "forbidAudioWords": true,
+    "rubric": "cloze 含5个空，无音频词、无语法模块"
+  },
+  {
+    "id": "h-phrase-only",
+    "message": "给我5个商务邮件短语，只要短语，不要例句",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["phrase"],
+    "forbidComponents": ["examples"],
+    "minCounts": { "phrase": 5 },
+    "rubric": "phrase 恰好5个，不含 examples 模块"
+  },
+  {
+    "id": "h-word-meaning-plus-sentence",
+    "message": "ephemeral 是什么意思？再帮我用它造个句子",
+    "expectIntent": "chat",
+    "expectCardSpecNull": true,
+    "rubric": "解释词义并给一个例句，全部在回复文字里，不出卡片"
+  },
+  {
+    "id": "h-dictation-one",
+    "message": "给我一句话做听写，我来拼写答案",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["short_answer"],
+    "forbidComponents": ["examples", "cloze", "correction"],
+    "rubric": "short_answer 题干+完整答案，无多余模块"
+  },
+  {
+    "id": "h-reading-3q",
+    "message": "给我一篇关于环保的短文，配3道阅读理解题",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["summary", "question_set"],
+    "forbidComponents": ["audio", "vocabulary", "grammar", "examples"],
+    "minCounts": { "question_set": 3 },
+    "rubric": "summary 短文 + 基于短文的3道题，无音频/词汇/语法/例句"
+  },
+  {
+    "id": "h-minimal-pair-2",
+    "message": "ship sheep 和 bit beat 这种最小对立体发音练习",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["minimal_pair"],
+    "rubric": "minimal_pair pairs 含两组对立词"
+  },
+  {
+    "id": "h-ordering-4",
+    "message": "把这几句按逻辑顺序排列的练习：起床、吃早饭、上班、回家",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["ordering"],
+    "forbidComponents": ["question_set", "sentence_builder"],
+    "rubric": "ordering items 是乱序句子，answer 用 | 连接正确顺序"
+  },
+  {
+    "id": "h-sentence-builder",
+    "message": "连词成句练习，关于一般将来时",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["sentence_builder"],
+    "forbidComponents": ["cloze", "correction", "examples"],
+    "rubric": "sentence_builder items 乱序词块，answer 完整句"
+  },
+  {
+    "id": "h-speaking-only",
+    "message": "给我一个关于旅行的口语话题提示，只要话题",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["speaking_prompt"],
+    "forbidComponents": ["rubric", "correction", "examples"],
+    "rubric": "只给 speaking_prompt.text，不加策略点和其它模块"
+  },
+  {
+    "id": "h-new-listening-2p-4q",
+    "message": "生成一段机场值机的对话听力，2个人，4道题",
+    "expectIntent": "new_listening_practice",
+    "rubric": "识别为生成新听力素材，practiceNeed 保留2人/4题约束"
+  },
+  {
+    "id": "h-method-advice",
+    "message": "我背单词总是记不住，有什么科学的方法吗？",
+    "expectIntent": "chat",
+    "expectCardSpecNull": true,
+    "rubric": "给记忆方法建议，不生成练习卡片"
+  },
+  {
+    "id": "h-file-export-docx",
+    "message": "把 diligent, sincere, accomplish 这三个词整理成 docx 文件给我",
+    "expectIntent": "chat",
+    "expectCardSpecNull": true,
+    "expectOutputFile": true,
+    "rubric": "intent=chat，outputFiles 含1个 docx，回复简短说明已生成"
+  },
+  {
+    "id": "h-translation-q",
+    "message": "脚踏实地用英语怎么说？",
+    "expectIntent": "chat",
+    "expectCardSpecNull": true,
+    "rubric": "直接给英文表达和简短说明，不生成练习卡片"
+  }
+]

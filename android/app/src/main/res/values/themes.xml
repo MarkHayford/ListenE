@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 公共属性放基础主题；按 API 分级的窗口属性见 values-v27 / values-v31。 -->
+    <style name="Base.Theme.ListenE" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/agent_void</item>
+        <item name="android:colorAccent">@color/agent_primary</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.ListenE" parent="Base.Theme.ListenE" />
+</resources>

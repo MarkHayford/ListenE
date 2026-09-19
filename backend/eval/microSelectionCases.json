@@ -1,0 +1,372 @@
+[
+  {
+    "id": "vocab-flashcard",
+    "message": "帮我记这几个新单词：diligent、curious、generous，想要能点开看中文意思的记忆卡",
+    "expect": [
+      "flashcard",
+      "pairs_memory"
+    ],
+    "note": "纯记忆展示→翻卡"
+  },
+  {
+    "id": "vocab-odd-one-out",
+    "message": "apple、banana、carrot、orange 里哪个跟其他不是一类？出成一道练习",
+    "expect": [
+      "odd_one_out"
+    ],
+    "forbid": [
+      "choice"
+    ],
+    "note": "选异类，别退回笼统 choice"
+  },
+  {
+    "id": "vocab-categorize",
+    "message": "把这些词按词性分到动词/名词/形容词三类：run、happiness、beautiful、eat、cat",
+    "expect": [
+      "categorize"
+    ],
+    "note": "分桶归类"
+  },
+  {
+    "id": "vocab-rank-order",
+    "message": "把 freezing、cold、warm、hot 按从冷到热排序，做成练习",
+    "expect": [
+      "rank_order"
+    ],
+    "forbid": [
+      "order"
+    ],
+    "note": "程度排序 ≠ 连词成句 order"
+  },
+  {
+    "id": "vocab-game",
+    "message": "来个复习动物单词的小游戏，轻松一点",
+    "expect": [
+      "word_search",
+      "hangman",
+      "pairs_memory"
+    ],
+    "note": "趣味词汇游戏"
+  },
+  {
+    "id": "spell-spelling-bee",
+    "message": "听发音把单词 necessary 一个字母一个字母拼出来",
+    "expect": [
+      "spelling_bee"
+    ],
+    "note": "听音拼写单词"
+  },
+  {
+    "id": "spell-scramble",
+    "message": "把打乱的字母 u-t-b-e-a-f-i-l 拼回正确的单词",
+    "expect": [
+      "word_scramble"
+    ],
+    "note": "字母重组"
+  },
+  {
+    "id": "spell-word-formation",
+    "message": "构词练习：给 happy、care、success，让我写出对应的名词或形容词形式",
+    "expect": [
+      "word_formation"
+    ],
+    "note": "词形转换/派生"
+  },
+  {
+    "id": "listen-dictation",
+    "message": "给我整句听写：读一句话，我把整句打出来",
+    "expect": [
+      "dictation"
+    ],
+    "forbid": [
+      "listen_cloze",
+      "listen_fill"
+    ],
+    "note": "整句听写 ≠ 听填缺词"
+  },
+  {
+    "id": "gram-open-cloze",
+    "message": "介词填空练习，不要给选项，我自己打字填：I'm good ___ English and I have ___ apple.",
+    "expect": [
+      "open_cloze"
+    ],
+    "forbid": [
+      "choice",
+      "cloze_select"
+    ],
+    "note": "打字填功能词，无选项"
+  },
+  {
+    "id": "gram-cloze-select",
+    "message": "完形填空，每个空给我三个选项选一个",
+    "expect": [
+      "cloze_select"
+    ],
+    "forbid": [
+      "open_cloze"
+    ],
+    "note": "每空独立选项"
+  },
+  {
+    "id": "gram-cloze-drag",
+    "message": "一段话挖几个空，从下面一个共享词库点词填进去",
+    "expect": [
+      "cloze_drag",
+      "cloze_select"
+    ],
+    "note": "共享词库点选填空"
+  },
+  {
+    "id": "gram-sentence-transform",
+    "message": "把这句改成被动语态：He wrote the book.",
+    "expect": [
+      "sentence_transform"
+    ],
+    "note": "句型/语态改写"
+  },
+  {
+    "id": "gram-order",
+    "message": "连词成句：to / school / I / go / every day",
+    "expect": [
+      "order"
+    ],
+    "forbid": [
+      "reorder_paragraph"
+    ],
+    "note": "单句连词成句"
+  },
+  {
+    "id": "gram-reorder-paragraph",
+    "message": "把这几句打乱的句子排成通顺的一段话",
+    "expect": [
+      "reorder_paragraph"
+    ],
+    "forbid": [
+      "order"
+    ],
+    "note": "篇章句子排序"
+  },
+  {
+    "id": "gram-true-false",
+    "message": "出几道判断题，判断这些英语语法说法对还是错",
+    "expect": [
+      "true_false"
+    ],
+    "forbid": [
+      "tfng"
+    ],
+    "note": "对/错，无材料"
+  },
+  {
+    "id": "gram-sentence-diagram",
+    "message": "分析句子成分，标出 She reads books 里每个词是主语、谓语还是宾语",
+    "expect": [
+      "sentence_diagram"
+    ],
+    "note": "句子成分"
+  },
+  {
+    "id": "gram-tokens",
+    "message": "找出并点出这句里用错的词：She go to school every day.",
+    "expect": [
+      "tokens"
+    ],
+    "forbid": [
+      "choice"
+    ],
+    "note": "点选找错"
+  },
+  {
+    "id": "gram-error-correction",
+    "message": "改错：把 She go to school yesterday 改成正确的整句写出来",
+    "expect": [
+      "error_correction"
+    ],
+    "forbid": [
+      "tokens"
+    ],
+    "note": "打字改正整句 ≠ 点选找错"
+  },
+  {
+    "id": "gram-proof-paragraph",
+    "message": "高考短文改错：给一段话，每行可能有一处错，让我逐行改",
+    "expect": [
+      "proof_paragraph"
+    ],
+    "note": "短文逐行改错"
+  },
+  {
+    "id": "gram-fill-table",
+    "message": "动词过去式表格填空：give、go、eat，把过去式那一列挖空让我填",
+    "expect": [
+      "fill_table"
+    ],
+    "forbid": [
+      "table"
+    ],
+    "note": "表格填空 ≠ 纯展示 table"
+  },
+  {
+    "id": "listen-fill",
+    "message": "听一句话，把缺的词从词库里点出来填空",
+    "expect": [
+      "listen_fill"
+    ],
+    "forbid": [
+      "listen_cloze"
+    ],
+    "note": "听+词库点选"
+  },
+  {
+    "id": "listen-cloze",
+    "message": "听一句话，把缺的词自己打字填出来，不给词库",
+    "expect": [
+      "listen_cloze"
+    ],
+    "forbid": [
+      "listen_fill"
+    ],
+    "note": "听+打字，无词库"
+  },
+  {
+    "id": "listen-audio-choice",
+    "message": "辨音练习：读一个词，我判断听到的是 ship 还是 sheep",
+    "expect": [
+      "audio_choice"
+    ],
+    "note": "最小对立辨音"
+  },
+  {
+    "id": "speak-score",
+    "message": "我要练口语跟读，读一句话给我发音评分",
+    "expect": [
+      "speak_score"
+    ],
+    "note": "跟读评分"
+  },
+  {
+    "id": "speak-roleplay",
+    "message": "模拟在咖啡店点单，跟我多轮对话练口语",
+    "expect": [
+      "roleplay_turn"
+    ],
+    "forbid": [
+      "dialogue_complete"
+    ],
+    "note": "多轮对话 ≠ 选回应"
+  },
+  {
+    "id": "speak-stress",
+    "message": "练单词重音：banana 的重音在哪个音节",
+    "expect": [
+      "stress_mark"
+    ],
+    "note": "单词重音"
+  },
+  {
+    "id": "read-tfng",
+    "message": "给一段短文，判断每句是 True、False 还是 Not Given",
+    "expect": [
+      "tfng"
+    ],
+    "forbid": [
+      "true_false"
+    ],
+    "note": "三态判断，须配材料"
+  },
+  {
+    "id": "read-match-headings",
+    "message": "雅思阅读：给几段文字和一批小标题，为每段选最合适的标题",
+    "expect": [
+      "match_headings"
+    ],
+    "note": "段落标题匹配"
+  },
+  {
+    "id": "read-match-info",
+    "message": "雅思阅读：判断每条信息分别出现在 A/B/C 哪一段",
+    "expect": [
+      "match_info"
+    ],
+    "note": "信息归段"
+  },
+  {
+    "id": "read-highlight-span",
+    "message": "在这段话里把所有动词都圈出来",
+    "expect": [
+      "highlight_span"
+    ],
+    "forbid": [
+      "tokens"
+    ],
+    "note": "篇章框选 ≠ 单句找错"
+  },
+  {
+    "id": "read-dialogue-complete",
+    "message": "给一段对话，让我从选项里选出最合适的下一句回应",
+    "expect": [
+      "dialogue_complete"
+    ],
+    "forbid": [
+      "roleplay_turn"
+    ],
+    "note": "选回应 ≠ 多轮对话"
+  },
+  {
+    "id": "translate-zh2en",
+    "message": "汉译英练习：我每天走路去上学",
+    "expect": [
+      "translate"
+    ],
+    "note": "翻译"
+  },
+  {
+    "id": "vocab-hangman",
+    "message": "来个猜单词游戏，根据提示逐个猜字母，别用完机会",
+    "expect": [
+      "hangman"
+    ],
+    "note": "猜词游戏"
+  },
+  {
+    "id": "gram-timed",
+    "message": "限时抢答：倒计时里快速做选择题巩固时态",
+    "expect": [
+      "timed_challenge"
+    ],
+    "note": "限时抢答"
+  },
+  {
+    "id": "gram-ai-hint",
+    "message": "给我一道难题，卡住时能逐步看提示，最后再揭示答案",
+    "expect": [
+      "ai_hint"
+    ],
+    "note": "渐进提示"
+  },
+  {
+    "id": "vocab-match",
+    "message": "把英文单词和中文意思连线配对：apple-苹果、banana-香蕉、cat-猫",
+    "expect": [
+      "match",
+      "pairs_memory"
+    ],
+    "note": "左右配对"
+  },
+  {
+    "id": "write-email",
+    "message": "写作练习：让我写一封 80-100 词的英文道歉邮件，说明原因并提出补救安排，我自己输入正文",
+    "expect": [
+      "writing"
+    ],
+    "note": "自由写作→writing（AI 批改）"
+  },
+  {
+    "id": "write-essay",
+    "message": "给我一个 B1 作文题练写作，我写完你给我评分",
+    "expect": [
+      "writing"
+    ],
+    "note": "作文+评分→writing"
+  }
+]

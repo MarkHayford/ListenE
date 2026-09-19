@@ -1,0 +1,154 @@
+[
+  {
+    "id": "grammar-explain",
+    "message": "现在完成时和一般过去时有什么区别？",
+    "expectIntent": "chat",
+    "expectCardSpecNull": true,
+    "rubric": "纯答疑，讲清两个时态区别即可，不应生成练习卡片"
+  },
+  {
+    "id": "word-meaning",
+    "message": "ambiguous 这个词是什么意思？",
+    "expectIntent": "chat",
+    "expectCardSpecNull": true,
+    "rubric": "直接解释词义，可给1-3例句，不生成卡片"
+  },
+  {
+    "id": "method-advice",
+    "message": "我听力老是跟不上，有什么提高方法吗？",
+    "expectIntent": "chat",
+    "expectCardSpecNull": true,
+    "rubric": "给方法建议，不生成练习卡片"
+  },
+  {
+    "id": "expr-diff",
+    "message": "say 和 tell 有什么区别？",
+    "expectIntent": "chat",
+    "expectCardSpecNull": true,
+    "rubric": "解释用法区别，不生成卡片"
+  },
+  {
+    "id": "vocab-5",
+    "message": "给我5个关于环境保护的英语单词卡片",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["vocabulary"],
+    "minCounts": { "vocabulary": 5 },
+    "rubric": "vocabulary 组件恰好包含5个与环保相关的词"
+  },
+  {
+    "id": "phrase-3",
+    "message": "来3个商务邮件常用短语",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["phrase"],
+    "minCounts": { "phrase": 3 },
+    "rubric": "phrase 组件恰好3个商务邮件短语"
+  },
+  {
+    "id": "qset-5",
+    "message": "出5道关于健康饮食的选择题，每题四个选项",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["question_set"],
+    "forbidComponents": ["question_preview"],
+    "minCounts": { "question_set": 5 },
+    "rubric": "question_set 恰好5题，每题4个选项，主题健康饮食"
+  },
+  {
+    "id": "reading-3",
+    "message": "给我一篇短文加3道阅读理解题",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["summary", "question_set"],
+    "forbidComponents": ["audio", "vocabulary", "grammar", "examples"],
+    "minCounts": { "question_set": 3 },
+    "rubric": "summary 是一段短文，question_set 是基于短文的3道题，无音频/词汇/语法/例句"
+  },
+  {
+    "id": "cloze-4",
+    "message": "选词填空练习，4个空，主题是旅行",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["cloze"],
+    "forbidComponents": ["grammar", "examples", "correction"],
+    "rubric": "cloze 短文含4个空，options 是词库，answer 用 | 连接4个答案"
+  },
+  {
+    "id": "single-choice",
+    "message": "给我一道单词含义选择题：meticulous，4个选项",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["cloze"],
+    "forbidComponents": ["vocabulary", "examples", "word_family"],
+    "rubric": "单题选择用 cloze 承载，options 4个，answer 是正确项，无多余模块"
+  },
+  {
+    "id": "dictation",
+    "message": "默写练习，给我一句话让我输入答案",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["short_answer"],
+    "forbidComponents": ["examples", "correction", "cloze"],
+    "rubric": "short_answer 题干 + 完整正确答案，无多余模块"
+  },
+  {
+    "id": "sentence-builder",
+    "message": "连词成句练习，关于现在完成时",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["sentence_builder"],
+    "forbidComponents": ["cloze", "correction", "examples"],
+    "rubric": "sentence_builder items 是乱序词块，answer 是完整正确句子"
+  },
+  {
+    "id": "ordering",
+    "message": "把几句话按逻辑顺序排列的练习",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["ordering"],
+    "forbidComponents": ["question_set", "sentence_builder"],
+    "rubric": "ordering items 是乱序整句，answer 用 | 连接正确顺序"
+  },
+  {
+    "id": "minimal-pair",
+    "message": "ship 和 sheep 这种最小对立体发音练习",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["minimal_pair"],
+    "rubric": "minimal_pair pairs 含 left/right 词对"
+  },
+  {
+    "id": "grammar-card",
+    "message": "讲讲被动语态，给我一张语法卡片",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["grammar"],
+    "rubric": "grammar 组件讲清被动语态规则"
+  },
+  {
+    "id": "speaking-only",
+    "message": "给我一个口语话题提示，只要提示",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["speaking_prompt"],
+    "forbidComponents": ["rubric", "correction", "examples"],
+    "rubric": "只给 speaking_prompt.text，不加策略点和其它模块"
+  },
+  {
+    "id": "no-audio-cloze",
+    "message": "CET4选词填空，不要音频",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["cloze"],
+    "forbidAudioWords": true,
+    "rubric": "cloze 题，reply 和组件里不得出现 听/播放/audio 等词"
+  },
+  {
+    "id": "new-listening-dialogue",
+    "message": "生成一段咖啡店点单的对话听力，2个人，3道题",
+    "expectIntent": "new_listening_practice",
+    "rubric": "应识别为生成新听力素材，practiceNeed 保留 2人/3题约束"
+  },
+  {
+    "id": "new-listening-article",
+    "message": "来一篇关于太空旅行的文章听力素材",
+    "expectIntent": "new_listening_practice",
+    "rubric": "应识别为生成新文章听力素材"
+  },
+  {
+    "id": "file-export",
+    "message": "把这些单词整理成一个 docx 文件发给我：accomplish, diligent, sincere",
+    "expectIntent": "chat",
+    "expectCardSpecNull": true,
+    "expectOutputFile": true,
+    "rubric": "intent=chat，outputFiles 含1个 docx 文件，reply 简短说明已生成"
+  }
+]

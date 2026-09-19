@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFE5E5E5</color>
+    <color name="purple_500">#FF111111</color>
+    <color name="purple_700">#FF050505</color>
+    <color name="teal_200">#FFF1F1F2</color>
+    <color name="teal_700">#FF111111</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="agent_void">#FFFFFFFF</color>
+    <color name="agent_surface">#FFFFFFFF</color>
+    <color name="agent_primary">#FF111111</color>
+    <color name="agent_void_night">#FF0F1014</color>
+    <color name="agent_ink_night">#FFE9EAEE</color>
+</resources>

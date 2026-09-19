@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <files-path
+        name="agent_outputs"
+        path="agent_outputs/" />
+    <cache-path
+        name="agent_cache"
+        path="." />
+</paths>

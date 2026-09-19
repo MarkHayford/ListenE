@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 夜间：窗口底色改深、状态栏图标改浅，避免启动白闪。 -->
+    <style name="Base.Theme.ListenE" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/agent_void_night</item>
+        <item name="android:colorAccent">@color/agent_ink_night</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

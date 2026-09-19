@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <cloud-backup>
+        <!-- 登录会话 token 不随云备份上传，避免备份被还原到其他设备后冒用 30 天会话。 -->
+        <exclude domain="sharedpref" path="listene_auth_store.xml" />
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="sharedpref" path="listene_auth_store.xml" />
+    </device-transfer>
+</data-extraction-rules>

@@ -1,0 +1,334 @@
+{
+  "model": "mimo-v2.5-pro",
+  "passed": 20,
+  "total": 20,
+  "rate": "100.0",
+  "cases": [
+    {
+      "id": "grammar-explain",
+      "message": "现在完成时和一般过去时有什么区别？",
+      "intent": "chat",
+      "deterministic": {
+        "pass": true,
+        "reasons": [],
+        "notes": []
+      },
+      "telemetry": {
+        "fallback": 0,
+        "invalid": 0,
+        "qualityWarn": 0
+      },
+      "pass": true
+    },
+    {
+      "id": "word-meaning",
+      "message": "ambiguous 这个词是什么意思？",
+      "intent": "chat",
+      "deterministic": {
+        "pass": true,
+        "reasons": [],
+        "notes": []
+      },
+      "telemetry": {
+        "fallback": 0,
+        "invalid": 0,
+        "qualityWarn": 0
+      },
+      "pass": true
+    },
+    {
+      "id": "method-advice",
+      "message": "我听力老是跟不上，有什么提高方法吗？",
+      "intent": "chat",
+      "deterministic": {
+        "pass": true,
+        "reasons": [],
+        "notes": []
+      },
+      "telemetry": {
+        "fallback": 0,
+        "invalid": 0,
+        "qualityWarn": 0
+      },
+      "pass": true
+    },
+    {
+      "id": "expr-diff",
+      "message": "say 和 tell 有什么区别？",
+      "intent": "chat",
+      "deterministic": {
+        "pass": true,
+        "reasons": [],
+        "notes": []
+      },
+      "telemetry": {
+        "fallback": 0,
+        "invalid": 0,
+        "qualityWarn": 0
+      },
+      "pass": true
+    },
+    {
+      "id": "vocab-5",
+      "message": "给我5个关于环境保护的英语单词卡片",
+      "intent": "practice_card",
+      "deterministic": {
+        "pass": true,
+        "reasons": [],
+        "notes": [
+          "管线中途发生过降级（以最终卡片质量为准）"
+        ]
+      },
+      "telemetry": {
+        "fallback": 1,
+        "invalid": 0,
+        "qualityWarn": 1
+      },
+      "pass": true
+    },
+    {
+      "id": "phrase-3",
+      "message": "来3个商务邮件常用短语",
+      "intent": "practice_card",
+      "deterministic": {
+        "pass": true,
+        "reasons": [],
+        "notes": []
+      },
+      "telemetry": {
+        "fallback": 0,
+        "invalid": 0,
+        "qualityWarn": 0
+      },
+      "pass": true
+    },
+    {
+      "id": "qset-5",
+      "message": "出5道关于健康饮食的选择题，每题四个选项",
+      "intent": "practice_card",
+      "deterministic": {
+        "pass": true,
+        "reasons": [],
+        "notes": []
+      },
+      "telemetry": {
+        "fallback": 0,
+        "invalid": 0,
+        "qualityWarn": 0
+      },
+      "pass": true
+    },
+    {
+      "id": "reading-3",
+      "message": "给我一篇短文加3道阅读理解题",
+      "intent": "practice_card",
+      "deterministic": {
+        "pass": true,
+        "reasons": [],
+        "notes": []
+      },
+      "telemetry": {
+        "fallback": 0,
+        "invalid": 0,
+        "qualityWarn": 0
+      },
+      "pass": true
+    },
+    {
+      "id": "cloze-4",
+      "message": "选词填空练习，4个空，主题是旅行",
+      "intent": "practice_card",
+      "deterministic": {
+        "pass": true,
+        "reasons": [],
+        "notes": []
+      },
+      "telemetry": {
+        "fallback": 0,
+        "invalid": 0,
+        "qualityWarn": 0
+      },
+      "pass": true
+    },
+    {
+      "id": "single-choice",
+      "message": "给我一道单词含义选择题：meticulous，4个选项",
+      "intent": "practice_card",
+      "deterministic": {
+        "pass": true,
+        "reasons": [],
+        "notes": []
+      },
+      "telemetry": {
+        "fallback": 0,
+        "invalid": 0,
+        "qualityWarn": 0
+      },
+      "pass": true
+    },
+    {
+      "id": "dictation",
+      "message": "默写练习，给我一句话让我输入答案",
+      "intent": "practice_card",
+      "deterministic": {
+        "pass": true,
+        "reasons": [],
+        "notes": []
+      },
+      "telemetry": {
+        "fallback": 0,
+        "invalid": 0,
+        "qualityWarn": 0
+      },
+      "pass": true
+    },
+    {
+      "id": "sentence-builder",
+      "message": "连词成句练习，关于现在完成时",
+      "intent": "practice_card",
+      "deterministic": {
+        "pass": true,
+        "reasons": [],
+        "notes": []
+      },
+      "telemetry": {
+        "fallback": 0,
+        "invalid": 0,
+        "qualityWarn": 0
+      },
+      "pass": true
+    },
+    {
+      "id": "ordering",
+      "message": "把几句话按逻辑顺序排列的练习",
+      "intent": "practice_card",
+      "deterministic": {
+        "pass": true,
+        "reasons": [],
+        "notes": []
+      },
+      "telemetry": {
+        "fallback": 0,
+        "invalid": 0,
+        "qualityWarn": 0
+      },
+      "pass": true
+    },
+    {
+      "id": "minimal-pair",
+      "message": "ship 和 sheep 这种最小对立体发音练习",
+      "intent": "practice_card",
+      "deterministic": {
+        "pass": true,
+        "reasons": [],
+        "notes": [
+          "管线中途发生过降级（以最终卡片质量为准）"
+        ]
+      },
+      "telemetry": {
+        "fallback": 1,
+        "invalid": 0,
+        "qualityWarn": 1
+      },
+      "pass": true
+    },
+    {
+      "id": "grammar-card",
+      "message": "讲讲被动语态，给我一张语法卡片",
+      "intent": "practice_card",
+      "deterministic": {
+        "pass": true,
+        "reasons": [],
+        "notes": []
+      },
+      "telemetry": {
+        "fallback": 0,
+        "invalid": 0,
+        "qualityWarn": 0
+      },
+      "pass": true
+    },
+    {
+      "id": "speaking-only",
+      "message": "给我一个口语话题提示，只要提示",
+      "intent": "practice_card",
+      "deterministic": {
+        "pass": true,
+        "reasons": [],
+        "notes": [
+          "管线中途发生过降级（以最终卡片质量为准）"
+        ]
+      },
+      "telemetry": {
+        "fallback": 1,
+        "invalid": 0,
+        "qualityWarn": 1
+      },
+      "pass": true
+    },
+    {
+      "id": "no-audio-cloze",
+      "message": "CET4选词填空，不要音频",
+      "intent": "practice_card",
+      "deterministic": {
+        "pass": true,
+        "reasons": [],
+        "notes": []
+      },
+      "telemetry": {
+        "fallback": 0,
+        "invalid": 0,
+        "qualityWarn": 0
+      },
+      "pass": true
+    },
+    {
+      "id": "new-listening-dialogue",
+      "message": "生成一段咖啡店点单的对话听力，2个人，3道题",
+      "intent": "new_listening_practice",
+      "deterministic": {
+        "pass": true,
+        "reasons": [],
+        "notes": []
+      },
+      "telemetry": {
+        "fallback": 0,
+        "invalid": 0,
+        "qualityWarn": 0
+      },
+      "pass": true
+    },
+    {
+      "id": "new-listening-article",
+      "message": "来一篇关于太空旅行的文章听力素材",
+      "intent": "new_listening_practice",
+      "deterministic": {
+        "pass": true,
+        "reasons": [],
+        "notes": []
+      },
+      "telemetry": {
+        "fallback": 0,
+        "invalid": 0,
+        "qualityWarn": 0
+      },
+      "pass": true
+    },
+    {
+      "id": "file-export",
+      "message": "把这些单词整理成一个 docx 文件发给我：accomplish, diligent, sincere",
+      "intent": "chat",
+      "deterministic": {
+        "pass": true,
+        "reasons": [],
+        "notes": []
+      },
+      "telemetry": {
+        "fallback": 0,
+        "invalid": 0,
+        "qualityWarn": 0
+      },
+      "pass": true
+    }
+  ]
+}

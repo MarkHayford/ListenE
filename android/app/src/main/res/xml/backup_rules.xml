@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- 登录会话 token 不进入自动备份（API < 31）；其余学习数据仍可备份。 -->
+    <exclude domain="sharedpref" path="listene_auth_store.xml" />
+</full-backup-content>

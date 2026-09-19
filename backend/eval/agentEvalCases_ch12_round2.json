@@ -1,0 +1,82 @@
+[
+  {
+    "id": "r2-qset-12",
+    "message": "出12道关于环境保护的选择题，每题四个选项",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["question_set"],
+    "forbidComponents": ["question_preview"],
+    "minCounts": { "question_set": 6 },
+    "rubric": "大数量按 best-effort 封顶（题组上限8），但必须贴主题环保、可渲染，不回退到通用兑底卡；至少6题"
+  },
+  {
+    "id": "r2-vocab-cn10",
+    "message": "给我十个关于科技的英语单词卡片",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["vocabulary"],
+    "minCounts": { "vocabulary": 10 },
+    "rubric": "vocabulary 恰好10个科技词（中文数字“十”要正确解析为数量）"
+  },
+  {
+    "id": "r2-neg-typeswitch",
+    "message": "不要选择题，给我做选词填空，5个空，主题旅行",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["cloze"],
+    "forbidComponents": ["question_set"],
+    "rubric": "否定选择题、改用选词填空 cloze；绝不能出现 question_set"
+  },
+  {
+    "id": "r2-phrase-6-noeg",
+    "message": "给我6个关于会议的英文短语，只要短语不要例句",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["phrase"],
+    "forbidComponents": ["examples"],
+    "minCounts": { "phrase": 6 },
+    "rubric": "phrase 恰好6个，不含 examples 模块"
+  },
+  {
+    "id": "r2-explain-nocard",
+    "message": "先别给我出题，就讲讲一般将来时怎么用",
+    "expectIntent": "chat",
+    "expectCardSpecNull": true,
+    "rubric": "显式拒绝出题 + 讲解请求 → chat，不生成任何练习卡"
+  },
+  {
+    "id": "r2-solve-this-q",
+    "message": "这道题怎么选：The letter ___ (write) by Tom yesterday. 该填 was written 还是 wrote？",
+    "expectIntent": "chat",
+    "expectCardSpecNull": true,
+    "rubric": "解答用户给定的这道题并讲原因，不另外生成新的练习卡"
+  },
+  {
+    "id": "r2-en-vocab-noeg",
+    "message": "Give me 5 vocabulary cards about technology, no example sentences",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["vocabulary"],
+    "forbidComponents": ["examples"],
+    "minCounts": { "vocabulary": 5 },
+    "rubric": "英文输入：vocabulary 恰好5个，无 examples"
+  },
+  {
+    "id": "r2-translate-sentence",
+    "message": "请把这句话翻译成英文：机会总是留给有准备的人",
+    "expectIntent": "chat",
+    "expectCardSpecNull": true,
+    "rubric": "直接给出英文翻译与简短说明，不生成翻译卡片"
+  },
+  {
+    "id": "r2-single-choice-cloze",
+    "message": "出一道关于一般现在时的选择题，4个选项",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["cloze"],
+    "forbidComponents": ["question_set", "grammar", "examples"],
+    "rubric": "单题含义/语法选择用 cloze 承载，无 question_set/语法/例句多余模块"
+  },
+  {
+    "id": "r2-dictation-2",
+    "message": "给我两句话做听写，我来拼写",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["short_answer"],
+    "forbidComponents": ["cloze", "examples"],
+    "rubric": "short_answer 题干+完整答案，无 cloze/例句多余模块"
+  }
+]

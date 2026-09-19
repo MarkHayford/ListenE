@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- API 27+ 夜间：导航栏图标改浅。 -->
+    <style name="Theme.ListenE" parent="Base.Theme.ListenE">
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+</resources>

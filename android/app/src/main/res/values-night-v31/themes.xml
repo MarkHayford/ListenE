@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- API 31+ 夜间：Android 12 启动画面底色同步改深。 -->
+    <style name="Theme.ListenE" parent="Base.Theme.ListenE">
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:windowSplashScreenBackground">@color/agent_void_night</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_splash_no_icon</item>
+    </style>
+</resources>

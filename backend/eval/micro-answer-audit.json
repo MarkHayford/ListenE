@@ -1,0 +1,3380 @@
+{
+  "model": "mimo-v2.5-pro",
+  "summary": {
+    "cases": 74,
+    "audited": 63,
+    "errors": 1,
+    "totalGradableNodes": 69,
+    "flaggedNodes": 6,
+    "flaggedCards": 6,
+    "nodeFlagRate": 0.087,
+    "cardFlagRate": 0.0952,
+    "genCalls": 76,
+    "verifyCalls": 63,
+    "verifyCostRatio": 0.83,
+    "avgGenMs": 9354,
+    "avgVerifyMs": 6851
+  },
+  "rows": [
+    {
+      "id": "vocab-flashcard-r1",
+      "message": "帮我记这几个新单词：diligent、curious、generous，想要能点开看中文意思的记忆卡",
+      "genMs": 2242,
+      "card": {
+        "title": "新词记忆卡",
+        "nodes": [
+          {
+            "type": "flashcard",
+            "cards": [
+              {
+                "front": "diligent",
+                "back": "勤奋的，刻苦的"
+              },
+              {
+                "front": "curious",
+                "back": "好奇的，求知欲强的"
+              },
+              {
+                "front": "generous",
+                "back": "慷慨的，大方的"
+              }
+            ]
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 0,
+      "verdicts": []
+    },
+    {
+      "id": "vocab-odd-one-out-r1",
+      "message": "apple、banana、carrot、orange 里哪个跟其他不是一类？出成一道练习",
+      "genMs": 2825,
+      "card": {
+        "title": "选异类",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "找出下面一组词中不属于同一类的那个。",
+            "role": "title"
+          },
+          {
+            "type": "odd_one_out",
+            "prompt": "选出不同类的一项：",
+            "items": [
+              "apple",
+              "banana",
+              "carrot",
+              "orange"
+            ],
+            "answer": "carrot",
+            "explanation": "apple（苹果）、banana（香蕉）、orange（橙子）都是水果，而 carrot（胡萝卜）是蔬菜，因此 carrot 与其他三项不同类。"
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 2373,
+      "verdicts": [
+        {
+          "index": 1,
+          "type": "odd_one_out",
+          "ok": true,
+          "reason": "标准答案正确，解释合理。",
+          "correctAnswer": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "vocab-categorize-r1",
+      "message": "把这些词按词性分到动词/名词/形容词三类：run、happiness、beautiful、eat、cat",
+      "genMs": 2921,
+      "card": {
+        "title": "词性分类练习",
+        "nodes": [
+          {
+            "type": "categorize",
+            "prompt": "将下列单词按词性分到三类：动词、名词、形容词",
+            "categories": [
+              {
+                "name": "动词(Verb)",
+                "items": [
+                  "run",
+                  "eat"
+                ]
+              },
+              {
+                "name": "名词(Noun)",
+                "items": [
+                  "happiness",
+                  "cat"
+                ]
+              },
+              {
+                "name": "形容词(Adjective)",
+                "items": [
+                  "beautiful"
+                ]
+              }
+            ],
+            "explanation": "分类依据：run(跑)、eat(吃)是表示动作的动词；happiness(幸福)、cat(猫)是表示人/事物/概念的名词；beautiful(美丽的)是修饰名词、描述特征的形容词。"
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1815,
+      "verdicts": [
+        {
+          "index": 0,
+          "type": "categorize",
+          "ok": true,
+          "reason": "",
+          "correctAnswer": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "vocab-rank-order-r1",
+      "message": "把 freezing、cold、warm、hot 按从冷到热排序，做成练习",
+      "genMs": 2784,
+      "card": {
+        "title": "温度程度排序练习",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "把下列温度词按从最冷到最热的程度排序：",
+            "role": "title"
+          },
+          {
+            "type": "rank_order",
+            "prompt": "将下列温度词从最冷排到最热：",
+            "items": [
+              "freezing",
+              "cold",
+              "warm",
+              "hot"
+            ],
+            "from": "最冷 coldest",
+            "to": "最热 hottest",
+            "explanation": "freezing（冰冻的，0°C以下）→ cold（冷的）→ warm（温暖的）→ hot（热的），这是温度由低到高的递进顺序。"
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1610,
+      "verdicts": [
+        {
+          "index": 1,
+          "type": "rank_order",
+          "ok": true,
+          "reason": "答案排序正确，与题干要求一致。"
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "vocab-game-r1",
+      "message": "来个复习动物单词的小游戏，轻松一点",
+      "genMs": 5417,
+      "card": {
+        "title": "动物单词轻松小测",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "🐾 动物单词大挑战！准备好了吗？",
+            "role": "title"
+          },
+          {
+            "type": "odd_one_out",
+            "prompt": "下面哪个动物不属于“家养宠物”类别？",
+            "items": [
+              "cat",
+              "dog",
+              "parrot",
+              "wolf"
+            ],
+            "answer": "wolf",
+            "explanation": "cat（猫）、dog（狗）、parrot（鹦鹉）都是常见的家养宠物，而 wolf（狼）是野生动物，不属于宠物。"
+          },
+          {
+            "type": "word_search",
+            "prompt": "在格子里找出下面这些动物单词！",
+            "grid": [
+              [
+                "C",
+                "A",
+                "T",
+                "D",
+                "O",
+                "G"
+              ],
+              [
+                "R",
+                "O",
+                "B",
+                "I",
+                "N",
+                "P"
+              ],
+              [
+                "F",
+                "F",
+                "I",
+                "S",
+                "H",
+                "A"
+              ],
+              [
+                "O",
+                "B",
+                "E",
+                "A",
+                "R",
+                "R"
+              ],
+              [
+                "X",
+                "R",
+                "O",
+                "W",
+                "L",
+                "O"
+              ],
+              [
+                "D",
+                "U",
+                "C",
+                "K",
+                "E",
+                "T"
+              ]
+            ],
+            "words": [
+              "CAT",
+              "DOG",
+              "FISH",
+              "BEAR",
+              "OWL",
+              "DUCK"
+            ]
+          },
+          {
+            "type": "pairs_memory",
+            "prompt": "翻开卡片，把动物和它们的叫声配对吧！",
+            "pairs": [
+              {
+                "left": "dog",
+                "right": "bark"
+              },
+              {
+                "left": "cat",
+                "right": "meow"
+              },
+              {
+                "left": "duck",
+                "right": "quack"
+              },
+              {
+                "left": "cow",
+                "right": "moo"
+              }
+            ]
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 2,
+      "verifyMs": 1739,
+      "verdicts": [
+        {
+          "index": 1,
+          "type": "odd_one_out",
+          "ok": true,
+          "reason": ""
+        },
+        {
+          "index": 2,
+          "type": "word_search",
+          "ok": false,
+          "reason": "网格中不存在单词 'BEAR'。",
+          "correctAnswer": "应移除 BEAR 或修改网格以包含 BEAR"
+        }
+      ],
+      "flagged": [
+        {
+          "index": 2,
+          "type": "word_search",
+          "ok": false,
+          "reason": "网格中不存在单词 'BEAR'。",
+          "correctAnswer": "应移除 BEAR 或修改网格以包含 BEAR"
+        }
+      ]
+    },
+    {
+      "id": "spell-spelling-bee-r1",
+      "message": "听发音把单词 necessary 一个字母一个字母拼出来",
+      "genMs": 1403,
+      "card": {
+        "title": "Spelling Bee: necessary",
+        "nodes": [
+          {
+            "type": "spelling_bee",
+            "word": "necessary",
+            "hint": "必要的、必需的"
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 941,
+      "verdicts": [
+        {
+          "index": 0,
+          "type": "spelling_bee",
+          "ok": true,
+          "reason": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "spell-scramble-r1",
+      "message": "把打乱的字母 u-t-b-e-a-f-i-l 拼回正确的单词",
+      "genMs": 1387,
+      "card": {
+        "title": "字母重组练习",
+        "nodes": [
+          {
+            "type": "word_scramble",
+            "word": "beautiful",
+            "hint": "美丽的",
+            "scrambled": [
+              "u",
+              "t",
+              "b",
+              "e",
+              "a",
+              "f",
+              "i",
+              "l"
+            ]
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1067,
+      "verdicts": [
+        {
+          "index": 0,
+          "type": "word_scramble",
+          "ok": true,
+          "reason": "",
+          "correctAnswer": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "spell-word-formation-r1",
+      "message": "构词练习：给 happy、care、success，让我写出对应的名词或形容词形式",
+      "genMs": 2432,
+      "card": {
+        "title": "构词法练习：happy, care, success",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "请将下列单词转换为指定的词性形式。",
+            "role": "title"
+          },
+          {
+            "type": "word_formation",
+            "prompt": "请将以下单词转换为要求的词性形式：",
+            "items": [
+              {
+                "base": "happy",
+                "target": "名词",
+                "answer": "happiness"
+              },
+              {
+                "base": "care",
+                "target": "形容词",
+                "answer": "careful"
+              },
+              {
+                "base": "success",
+                "target": "形容词",
+                "answer": "successful"
+              }
+            ]
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1267,
+      "verdicts": [
+        {
+          "index": 1,
+          "type": "word_formation",
+          "ok": true,
+          "reason": "所有答案均正确且唯一",
+          "correctAnswer": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "listen-dictation-r1",
+      "message": "给我整句听写：读一句话，我把整句打出来",
+      "genMs": 1991,
+      "card": {
+        "title": "整句听写",
+        "nodes": [
+          {
+            "type": "dictation",
+            "text": "The quick brown fox jumps over the lazy dog.",
+            "hint": "快速的棕色狐狸跳过了那只懒狗。"
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1499,
+      "verdicts": [
+        {
+          "index": 0,
+          "type": "dictation",
+          "ok": true,
+          "reason": "",
+          "correctAnswer": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "gram-open-cloze-r1",
+      "message": "介词填空练习，不要给选项，我自己打字填：I'm good ___ English and I have ___ apple.",
+      "genMs": 1597,
+      "card": {
+        "title": "介词填空练习",
+        "nodes": [
+          {
+            "type": "open_cloze",
+            "text": "I'm good ___ English and I have ___ apple.",
+            "answers": [
+              "at",
+              "an"
+            ]
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1406,
+      "verdicts": [
+        {
+          "index": 0,
+          "type": "open_cloze",
+          "ok": true,
+          "reason": "答案正确且符合语法",
+          "correctAnswer": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "gram-cloze-select-r1",
+      "message": "完形填空，每个空给我三个选项选一个",
+      "genMs": 6759,
+      "card": {
+        "title": "完形填空练习",
+        "nodes": [
+          {
+            "type": "passage",
+            "text": "Sarah had always been fascinated by the night sky. She often spent hours (1)______ at the stars, wondering about the mysteries of the universe. One evening, she decided to (2)______ her curiosity by visiting the local observatory. The guide explained that the bright (3)______ she saw were actually planets, not stars. Sarah felt a (4)______ of excitement as she learned more about astronomy."
+          },
+          {
+            "type": "cloze_select",
+            "text": "Sarah had always been fascinated by the night sky. She often spent hours (1)______ at the stars, wondering about the mysteries of the universe. One evening, she decided to (2)______ her curiosity by visiting the local observatory. The guide explained that the bright (3)______ she saw were actually planets, not stars. Sarah felt a (4)______ of excitement as she learned more about astronomy.",
+            "blanks": [
+              {
+                "options": [
+                  "looking",
+                  "staring",
+                  "glancing"
+                ],
+                "answer": "staring"
+              },
+              {
+                "options": [
+                  "satisfy",
+                  "satisfying",
+                  "satisfied"
+                ],
+                "answer": "satisfy"
+              },
+              {
+                "options": [
+                  "spots",
+                  "points",
+                  "objects"
+                ],
+                "answer": "objects"
+              },
+              {
+                "options": [
+                  "wave",
+                  "surge",
+                  "current"
+                ],
+                "answer": "surge"
+              }
+            ],
+            "explanation": "(1) 'staring' 表示专注地凝视，与好奇的语境最配。(2) 'satisfy' 是动词原形，与 'decided to' 后接动词原形一致。(3) 'objects' 泛指天体，涵盖行星和星星，语义最准确。(4) 'a surge of excitement' 是固定搭配，表示一阵激动。"
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1189,
+      "verdicts": [
+        {
+          "index": 1,
+          "type": "cloze_select",
+          "ok": true,
+          "reason": "",
+          "correctAnswer": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "gram-cloze-drag-r1",
+      "message": "一段话挖几个空，从下面一个共享词库点词填进去",
+      "genMs": 2416,
+      "card": {
+        "title": "Cloze Drag Exercise",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "从下方词库中选择正确的词填入空格。",
+            "role": "body"
+          },
+          {
+            "type": "cloze_drag",
+            "text": "The quick brown fox ___ over the lazy dog. It was a beautiful ___ and the sun was shining ___.",
+            "bank": [
+              "jumps",
+              "jumped",
+              "day",
+              "night",
+              "brightly",
+              "bright"
+            ],
+            "answers": [
+              "jumped",
+              "day",
+              "brightly"
+            ]
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1235,
+      "verdicts": [
+        {
+          "index": 1,
+          "type": "cloze_drag",
+          "ok": true,
+          "reason": "答案语法正确、与语境自洽，词库中均有对应词。"
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "gram-sentence-transform-r1",
+      "message": "把这句改成被动语态：He wrote the book.",
+      "genMs": 3942,
+      "card": {
+        "title": "被动语态改写",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "将下列句子改为被动语态。",
+            "role": "title"
+          },
+          {
+            "type": "sentence_transform",
+            "prompt": "改为被动语态",
+            "source": "He wrote the book.",
+            "answer": "The book was written by him.",
+            "accept": [
+              "The book was written by him.",
+              "The book was written.",
+              "The book was written by Him.",
+              "the book was written by him"
+            ],
+            "hint": "被动语态结构：主语 + be动词 + 过去分词 (+ by 施动者)"
+          },
+          {
+            "type": "ai_hint",
+            "prompt": "He wrote the book. 的被动语态是什么？",
+            "hints": [
+              "被动语态的基本结构是：主语 + be动词 + 过去分词",
+              "原句的宾语 the book 变成新主语",
+              "动词 wrote 的过去分词是 written",
+              "be动词用 was（因为原句是过去时）"
+            ],
+            "answer": "The book was written by him."
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 2510,
+      "verdicts": [
+        {
+          "index": 1,
+          "type": "sentence_transform",
+          "ok": true,
+          "reason": "答案语法正确且自洽。",
+          "correctAnswer": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "gram-order-r1",
+      "message": "连词成句：to / school / I / go / every day",
+      "genMs": 2289,
+      "card": {
+        "title": "连词成句",
+        "nodes": [
+          {
+            "type": "order",
+            "prompt": "将单词排列成完整的句子",
+            "items": [
+              "to",
+              "school",
+              "I",
+              "go",
+              "every day"
+            ],
+            "answer": "I go to school every day",
+            "explanation": "主语 I + 动词 go + 地点状语 to school + 时间状语 every day，符合英语基本语序：主语 + 谓语 + 地点 + 时间。"
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1509,
+      "verdicts": [
+        {
+          "index": 0,
+          "type": "order",
+          "ok": true,
+          "reason": "标准答案语法、拼写正确，与题干自洽。",
+          "correctAnswer": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "gram-reorder-paragraph-r1",
+      "message": "把这几句打乱的句子排成通顺的一段话",
+      "genMs": 3608,
+      "card": {
+        "title": "语篇排序练习",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "请将下列打乱的句子按正确顺序排列，组成一段通顺的短文。",
+            "role": "title"
+          },
+          {
+            "type": "reorder_paragraph",
+            "prompt": "请把下面的句子按逻辑顺序重新排列，使其成为一段通顺的短文。",
+            "sentences": [
+              "The sun was setting behind the mountains.",
+              "Birds were flying back to their nests.",
+              "A cool breeze began to blow across the valley.",
+              "The sky turned orange and purple.",
+              "It was the end of a beautiful day."
+            ]
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1499,
+      "verdicts": [
+        {
+          "index": 1,
+          "type": "reorder_paragraph",
+          "ok": true,
+          "reason": "标准答案未提供，无法判分",
+          "correctAnswer": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "gram-true-false-r1",
+      "message": "出几道判断题，判断这些英语语法说法对还是错",
+      "genMs": 7109,
+      "card": {
+        "title": "英语语法判断题",
+        "nodes": [
+          {
+            "type": "true_false",
+            "prompt": "判断以下英语语法说法是否正确",
+            "statements": [
+              {
+                "text": "现在完成时表示过去发生的动作对现在造成的影响或结果。",
+                "answer": true,
+                "explanation": "现在完成时（have/has + 过去分词）的核心用法之一就是表示过去发生的动作对现在产生的影响或结果，例如：I have lost my key.（我丢了钥匙，现在进不去）"
+              },
+              {
+                "text": "在定语从句中，which只能指代物，不能指代人。",
+                "answer": false,
+                "explanation": "which通常指代物，但在非限制性定语从句中，which可以指代前面整个句子或部分情况。此外，关系代词的选择更取决于先行词，指人一般用who/whom/that，但特殊语境下有例外。更准确的说法是which主要指代物。"
+              },
+              {
+                "text": "不可数名词没有复数形式，也不能用a/an修饰。",
+                "answer": true,
+                "explanation": "不可数名词（如water, information, advice）通常没有复数形式，也不能直接用不定冠词a/an修饰。如果要表示数量，需要借助量词，如a glass of water, a piece of advice。"
+              },
+              {
+                "text": "副词在句中只能修饰动词。",
+                "answer": false,
+                "explanation": "副词的修饰范围很广，不仅可以修饰动词（如run quickly），还可以修饰形容词（如very beautiful）、其他副词（如extremely fast）、整个句子（如Fortunately, he passed the exam.）等。"
+              },
+              {
+                "text": "虚拟语气中，与现在事实相反的假设，if从句用一般过去时，主句用would/could/might + 动词原形。",
+                "answer": true,
+                "explanation": "这是虚拟语气的基本规则之一。例如：If I were you, I would study harder.（如果我是你，我会更努力学习）——'were'表示与现在事实相反的假设。"
+              }
+            ]
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1870,
+      "verdicts": [
+        {
+          "index": 0,
+          "type": "true_false",
+          "ok": true,
+          "reason": "所有陈述的答案和解释均正确。",
+          "correctAnswer": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "gram-sentence-diagram-r1",
+      "message": "分析句子成分，标出 She reads books 里每个词是主语、谓语还是宾语",
+      "genMs": 1805,
+      "card": {
+        "title": "句子成分分析",
+        "nodes": [
+          {
+            "type": "sentence_diagram",
+            "prompt": "将句子切分为词/短语，为每个成分选择正确的语法标签",
+            "sentence": "She reads books.",
+            "labels": [
+              "主语",
+              "谓语",
+              "宾语"
+            ],
+            "items": [
+              {
+                "text": "She",
+                "label": "主语"
+              },
+              {
+                "text": "reads",
+                "label": "谓语"
+              },
+              {
+                "text": "books",
+                "label": "宾语"
+              }
+            ]
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1596,
+      "verdicts": [
+        {
+          "index": 0,
+          "type": "sentence_diagram",
+          "ok": true,
+          "reason": "标签分配正确，无客观错误"
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "gram-tokens-r1",
+      "message": "找出并点出这句里用错的词：She go to school every day.",
+      "genMs": 2210,
+      "card": {
+        "title": "点选找错",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "任务：找出并点出下面句子中用错的词。",
+            "role": "title"
+          },
+          {
+            "type": "tokens",
+            "text": "She go to school every day.",
+            "correct": "She goes to school every day.",
+            "errors": [
+              "go"
+            ],
+            "explanation": "主语 She 是第三人称单数，一般现在时动词需加 -s，应改为 goes。"
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1300,
+      "verdicts": [
+        {
+          "index": 1,
+          "type": "tokens",
+          "ok": true,
+          "reason": "语法事实正确，主语第三人称单数需用goes，错误词为go。"
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "gram-error-correction-r1",
+      "message": "改错：把 She go to school yesterday 改成正确的整句写出来",
+      "genMs": 2932,
+      "card": {
+        "title": "句子改错",
+        "nodes": [
+          {
+            "type": "error_correction",
+            "sentence": "She go to school yesterday",
+            "answer": "She went to school yesterday",
+            "accept": [
+              "She goes to school yesterday"
+            ],
+            "explanation": "'yesterday'表示过去时间，动词需用过去式 'went'，而非原形 'go'。"
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1475,
+      "verdicts": [
+        {
+          "index": 0,
+          "type": "error_correction",
+          "ok": false,
+          "reason": "'goes'用于一般现在时，与'yesterday'过去时间矛盾",
+          "correctAnswer": "She went to school yesterday"
+        }
+      ],
+      "flagged": [
+        {
+          "index": 0,
+          "type": "error_correction",
+          "ok": false,
+          "reason": "'goes'用于一般现在时，与'yesterday'过去时间矛盾",
+          "correctAnswer": "She went to school yesterday"
+        }
+      ]
+    },
+    {
+      "id": "gram-proof-paragraph-r1",
+      "message": "高考短文改错：给一段话，每行可能有一处错，让我逐行改",
+      "genMs": 6306,
+      "card": {
+        "title": "高考短文改错练习",
+        "nodes": [
+          {
+            "type": "proof_paragraph",
+            "prompt": "以下短文中共有10处错误（每行至多1处）。请在原句上直接改正，可增词、删词或改词，但不得改变原意。",
+            "lines": [
+              {
+                "text": "Last Sunday, I went to the park with my parents. We had a good time there."
+              },
+              {
+                "text": "On the way to home, I saw a old man lying on the ground."
+              },
+              {
+                "text": "He looked very worry and seemed to need help."
+              },
+              {
+                "text": "I run to him quickly and asked what was the matter."
+              },
+              {
+                "text": "He said that he have fallen down and hurt his leg."
+              },
+              {
+                "text": "I tried to help him stand up, but he was too pain to move."
+              },
+              {
+                "text": "My father called 120 at once, and an ambulance arrived in ten minute."
+              },
+              {
+                "text": "The doctors checked him careful and took him to the hospital."
+              },
+              {
+                "text": "We were all tired, but we felt happy because of we did a good deed."
+              },
+              {
+                "text": "It was a unforgettable experience that taught me the importance of helping others.",
+                "answer": "It was an unforgettable experience that taught me the importance of helping others."
+              },
+              {
+                "text": "I hope everyone can help those which are in need.",
+                "answer": "I hope everyone can help those who are in need."
+              }
+            ]
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1985,
+      "verdicts": [
+        {
+          "index": 0,
+          "type": "proof_paragraph",
+          "ok": false,
+          "reason": "Lines 2-9缺少对应答案节点，无法判分。Lines 10-11答案节点存在但格式不匹配预期。"
+        }
+      ],
+      "flagged": [
+        {
+          "index": 0,
+          "type": "proof_paragraph",
+          "ok": false,
+          "reason": "Lines 2-9缺少对应答案节点，无法判分。Lines 10-11答案节点存在但格式不匹配预期。"
+        }
+      ]
+    },
+    {
+      "id": "gram-fill-table-r1",
+      "message": "动词过去式表格填空：give、go、eat，把过去式那一列挖空让我填",
+      "genMs": 2834,
+      "card": {
+        "title": "动词过去式填空",
+        "nodes": [
+          {
+            "type": "fill_table",
+            "title": "动词过去式",
+            "headers": [
+              "原形",
+              "过去式"
+            ],
+            "rows": [
+              [
+                "give",
+                "gave"
+              ],
+              [
+                "go",
+                "went"
+              ],
+              [
+                "eat",
+                "ate"
+              ]
+            ],
+            "blanks": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1059,
+      "verdicts": [
+        {
+          "index": 0,
+          "type": "fill_table",
+          "ok": true,
+          "reason": "",
+          "correctAnswer": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "listen-fill-r1",
+      "message": "听一句话，把缺的词从词库里点出来填空",
+      "genMs": 4008,
+      "card": {
+        "title": "听力填空练习",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "听句子，从词库中选择正确的词填入空格。",
+            "role": "body"
+          },
+          {
+            "type": "listen_fill",
+            "audioText": "She has been studying English for three years.",
+            "text": "She has been ___ English for ___ years.",
+            "bank": [
+              "studying",
+              "studied",
+              "three",
+              "third",
+              "the"
+            ],
+            "answers": [
+              "studying",
+              "three"
+            ]
+          },
+          {
+            "type": "text",
+            "text": "现在完成进行时强调动作从过去持续到现在。",
+            "role": "hint"
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1173,
+      "verdicts": [
+        {
+          "index": 1,
+          "type": "listen_fill",
+          "ok": true,
+          "reason": "音频文本与题干自洽，答案准确。"
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "listen-cloze-r1",
+      "message": "听一句话，把缺的词自己打字填出来，不给词库",
+      "genMs": 3615,
+      "card": {
+        "title": "听力填空练习",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "请听句子，然后把听到的缺失单词打字填出来。",
+            "role": "hint"
+          },
+          {
+            "type": "listen_cloze",
+            "audioText": "The professor discussed the impact of climate change on coastal ecosystems during the lecture.",
+            "text": "The professor discussed the impact of ___ change on coastal ecosystems during the lecture.",
+            "answers": [
+              "climate"
+            ]
+          },
+          {
+            "type": "listen_cloze",
+            "audioText": "She decided to postpone the meeting until next Monday due to unforeseen circumstances.",
+            "text": "She decided to ___ the meeting until next Monday due to unforeseen circumstances.",
+            "answers": [
+              "postpone"
+            ]
+          },
+          {
+            "type": "text",
+            "text": "听力填空需要仔细聆听每个单词的发音，并结合上下文理解句意。",
+            "role": "body"
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 2,
+      "verifyMs": 2614,
+      "verdicts": [
+        {
+          "index": 1,
+          "type": "listen_cloze",
+          "ok": true,
+          "reason": "答案与音频文本一致，拼写正确。",
+          "correctAnswer": ""
+        },
+        {
+          "index": 2,
+          "type": "listen_cloze",
+          "ok": true,
+          "reason": "答案与音频文本一致，拼写正确。",
+          "correctAnswer": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "listen-audio-choice-r1",
+      "message": "辨音练习：读一个词，我判断听到的是 ship 还是 sheep",
+      "genMs": 3089,
+      "card": {
+        "title": "ship vs sheep 辨音",
+        "nodes": [
+          {
+            "type": "audio_choice",
+            "audioText": "ship",
+            "prompt": "你听到的是哪个词？",
+            "options": [
+              "ship",
+              "sheep"
+            ],
+            "answer": "ship",
+            "explanation": "ship 的元音是短音 /ɪ/，sheep 是长音 /iː/，注意区分长短元音。"
+          },
+          {
+            "type": "audio_choice",
+            "audioText": "sheep",
+            "prompt": "你听到的是哪个词？",
+            "options": [
+              "ship",
+              "sheep"
+            ],
+            "answer": "sheep",
+            "explanation": "sheep 的元音是长音 /iː/，听起来更拉长明亮；ship 是短促的 /ɪ/。"
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 2,
+      "verifyMs": 1942,
+      "verdicts": [
+        {
+          "index": 0,
+          "type": "audio_choice",
+          "ok": true,
+          "reason": "",
+          "correctAnswer": ""
+        },
+        {
+          "index": 1,
+          "type": "audio_choice",
+          "ok": true,
+          "reason": "",
+          "correctAnswer": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "speak-score-r1",
+      "message": "我要练口语跟读，读一句话给我发音评分",
+      "genMs": 4032,
+      "card": {
+        "title": "口语跟读评分练习",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "请跟读以下句子，系统将为你评分。",
+            "role": "title"
+          },
+          {
+            "type": "speak_score",
+            "text": "The early bird catches the worm, but the second mouse gets the cheese."
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 0,
+      "verdicts": []
+    },
+    {
+      "id": "speak-roleplay-r1",
+      "message": "模拟在咖啡店点单，跟我多轮对话练口语",
+      "genMs": 4882,
+      "card": {
+        "title": "咖啡店口语对话练习",
+        "nodes": [
+          {
+            "type": "roleplay_turn",
+            "scenario": "你是一家精品咖啡店的热情店员，我是来点单的顾客。请用英文进行对话，模拟真实的咖啡店点单场景。",
+            "opening": "Good morning! Welcome to The Daily Grind. What can I get for you today?",
+            "goal": "成功完成一次完整的咖啡店点单，包括选择饮品、定制细节（如大小、温度、加奶等）并完成付款。",
+            "turns": 6
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 0,
+      "verdicts": []
+    },
+    {
+      "id": "speak-stress-r1",
+      "message": "练单词重音：banana 的重音在哪个音节",
+      "genMs": 2541,
+      "card": {
+        "title": "banana 重音练习",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "请标出单词 banana 的重读音节：",
+            "role": "title"
+          },
+          {
+            "type": "stress_mark",
+            "word": "banana",
+            "syllables": [
+              "ba",
+              "na",
+              "na"
+            ],
+            "stress": 2
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1180,
+      "verdicts": [
+        {
+          "index": 1,
+          "type": "stress_mark",
+          "ok": true,
+          "reason": "",
+          "correctAnswer": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "read-tfng-r1",
+      "message": "给一段短文，判断每句是 True、False 还是 Not Given",
+      "genMs": 7699,
+      "card": {
+        "title": "阅读理解：判断对错与未提及",
+        "nodes": [
+          {
+            "type": "passage",
+            "text": "The development of the city's new public transportation system has been a major focus for the local government. The project, which includes the construction of a light rail network and the expansion of bus routes, is expected to significantly reduce traffic congestion in the downtown area. Officials have stated that the new system will be fully operational by the end of next year. However, some residents have expressed concerns about the environmental impact, particularly the potential loss of green spaces during construction. The government has promised to plant two new trees for every one removed."
+          },
+          {
+            "type": "tfng",
+            "prompt": "根据上文，判断以下陈述是 True（文中支持）、False（文中矛盾）还是 Not Given（文中未提及）。",
+            "statements": [
+              {
+                "text": "The primary goal of the new transportation project is to decrease traffic jams.",
+                "answer": "true",
+                "explanation": "文中明确提到项目旨在“significantly reduce traffic congestion”，与陈述一致。"
+              },
+              {
+                "text": "The light rail network will be completed before the bus route expansion.",
+                "answer": "not_given",
+                "explanation": "文中只提到项目包括轻轨建设和公交线路扩展，并未说明两者的完成顺序。"
+              },
+              {
+                "text": "The government has guaranteed that no green spaces will be lost during construction.",
+                "answer": "false",
+                "explanation": "文中提到有居民担忧施工可能导致绿地丧失，且政府承诺“种植两棵新树以替代每一棵被移除的树”，这暗示了可能有树木被移除，与“保证无绿地丧失”矛盾。"
+              },
+              {
+                "text": "All residents are in favor of the new transportation system.",
+                "answer": "not_given",
+                "explanation": "文中只提到“一些居民”表达了担忧，并未提及所有居民的态度，因此无法判断是否全部支持。"
+              }
+            ]
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1298,
+      "verdicts": [
+        {
+          "index": 1,
+          "type": "tfng",
+          "ok": true,
+          "reason": "所有答案与题干自洽且客观正确，解释合理。"
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "read-match-headings-r1",
+      "message": "雅思阅读：给几段文字和一批小标题，为每段选最合适的标题",
+      "genMs": 13239,
+      "card": {
+        "title": "IELTS Matching Headings Practice",
+        "nodes": [
+          {
+            "type": "passage",
+            "text": "**Paragraph A**\nFor centuries, humans have gazed at the stars, attempting to understand the cosmos. Early astronomers like Galileo used simple telescopes to make groundbreaking observations, challenging long-held beliefs. His discovery of Jupiter's moons provided evidence for the heliocentric model, fundamentally shifting our view of the universe.\n\n**Paragraph B**\nThe 20th century ushered in a new era of space exploration. With the advent of rocket technology, humans could physically venture beyond Earth's atmosphere. The Apollo 11 mission in 1969, which successfully landed astronauts on the Moon, stands as a monumental achievement. This era was defined by intense competition between superpowers, driving rapid technological innovation.\n\n**Paragraph C**\nModern astronomy has moved beyond mere observation and short-range travel. Sophisticated instruments like the Hubble Space Telescope allow us to peer into the depths of the universe, capturing images of galaxies billions of light-years away. Furthermore, robotic probes like Voyager have traveled to the outer solar system, sending back invaluable data about distant planets.\n\n**Paragraph D**\nThe future of space science points toward sustainability and commercialization. Initiatives aim to establish permanent bases on the Moon and Mars, with a focus on using local resources. Simultaneously, private companies are entering the field, developing reusable rockets to drastically reduce the cost of accessing space, heralding a new age of public participation."
+          },
+          {
+            "type": "match_headings",
+            "prompt": "Read the four paragraphs above about the history of space exploration. Match each paragraph (A-D) with the most suitable heading from the list below.",
+            "paragraphs": [
+              {
+                "label": "A",
+                "text": "For centuries, humans have gazed at the stars, attempting to understand the cosmos. Early astronomers like Galileo used simple telescopes to make groundbreaking observations, challenging long-held beliefs. His discovery of Jupiter's moons provided evidence for the heliocentric model, fundamentally shifting our view of the universe.",
+                "answer": "The origins of astronomical observation"
+              },
+              {
+                "label": "B",
+                "text": "The 20th century ushered in a new era of space exploration. With the advent of rocket technology, humans could physically venture beyond Earth's atmosphere. The Apollo 11 mission in 1969, which successfully landed astronauts on the Moon, stands as a monumental achievement. This era was defined by intense competition between superpowers, driving rapid technological innovation.",
+                "answer": "The dawn of the space age and human spaceflight"
+              },
+              {
+                "label": "C",
+                "text": "Modern astronomy has moved beyond mere observation and short-range travel. Sophisticated instruments like the Hubble Space Telescope allow us to peer into the depths of the universe, capturing images of galaxies billions of light-years away. Furthermore, robotic probes like Voyager have traveled to the outer solar system, sending back invaluable data about distant planets.",
+                "answer": "Advanced tools for deep-space investigation"
+              },
+              {
+                "label": "D",
+                "text": "The future of space science points toward sustainability and commercialization. Initiatives aim to establish permanent bases on the Moon and Mars, with a focus on using local resources. Simultaneously, private companies are entering the field, developing reusable rockets to drastically reduce the cost of accessing space, heralding a new age of public participation.",
+                "answer": "New frontiers: settlement and commercial ventures"
+              }
+            ],
+            "headings": [
+              "The origins of astronomical observation",
+              "The dawn of the space age and human spaceflight",
+              "Advanced tools for deep-space investigation",
+              "New frontiers: settlement and commercial ventures",
+              "The rivalry that fueled space innovation",
+              "Limitations of early telescopes",
+              "The environmental impact of space travel",
+              "Public misconceptions about astronomy"
+            ],
+            "explanation": "Paragraph A focuses on early *observation* and *understanding* (Galileo's discoveries). Paragraph B details the *advent of rocket technology* and *human spaceflight* (Apollo 11), marking a specific 'dawn' or beginning. Paragraph C describes *modern*, *sophisticated* instruments and probes for *investigation*. Paragraph D discusses *future* plans for *settlement* and *commercial* activity."
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1428,
+      "verdicts": [
+        {
+          "index": 1,
+          "type": "match_headings",
+          "ok": true,
+          "reason": "所有标准答案均与段落内容高度自洽，标题匹配准确无误。"
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "read-match-info-r1",
+      "message": "雅思阅读：判断每条信息分别出现在 A/B/C 哪一段",
+      "genMs": 8477,
+      "card": {
+        "title": "IELTS Reading - Matching Information",
+        "nodes": [
+          {
+            "type": "passage",
+            "text": "A. The city's population has grown by 15% over the past decade, largely due to an influx of young professionals attracted by the booming tech sector. This demographic shift has brought new energy and innovation to the area, but has also placed considerable strain on existing housing and transport infrastructure.\n\nB. In response to these pressures, the city council has recently approved a controversial redevelopment plan for the waterfront district. The project aims to construct high-density housing and modern public spaces, though local heritage groups have strongly objected to the demolition of several historic warehouses.\n\nC. Meanwhile, the environmental impact of rapid urban development is becoming increasingly apparent. Studies show a significant rise in air pollution levels and a decline in local biodiversity. Community-led initiatives are now emerging to promote green spaces and sustainable living practices within the urban environment."
+          },
+          {
+            "type": "match_info",
+            "prompt": "Based on the passage above, which paragraph (A, B, or C) contains each piece of information?",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ],
+            "statements": [
+              {
+                "text": "The percentage growth of the city's population over ten years.",
+                "answer": "A"
+              },
+              {
+                "text": "An objection raised by heritage organizations.",
+                "answer": "B"
+              },
+              {
+                "text": "Evidence of worsening environmental conditions.",
+                "answer": "C"
+              },
+              {
+                "text": "The professional background of new residents.",
+                "answer": "A"
+              },
+              {
+                "text": "A specific urban area being redesigned.",
+                "answer": "B"
+              },
+              {
+                "text": "Community-based efforts to address ecological concerns.",
+                "answer": "C"
+              }
+            ],
+            "explanation": "The statements are designed to test detailed reading and information location skills. Key distinctions: A focuses on demographics and causes; B on planning and controversy; C on environmental consequences and community response. Ensure each detail is matched to its precise origin paragraph."
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1503,
+      "verdicts": [
+        {
+          "index": 1,
+          "type": "match_info",
+          "ok": true,
+          "reason": "答案均与原文段落主题自洽，无法从给定信息判断对错。"
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "read-highlight-span-r1",
+      "message": "在这段话里把所有动词都圈出来",
+      "genMs": 2387,
+      "card": {
+        "title": "找出文中的动词",
+        "nodes": [
+          {
+            "type": "highlight_span",
+            "prompt": "请在以下文段中选出所有的动词",
+            "text": "The quick brown fox jumps over the lazy dog and runs across the field.",
+            "answers": [
+              "jumps",
+              "over",
+              "runs",
+              "across"
+            ],
+            "explanation": "这段话中的动词包括：jumps（跳）、runs（跑）。'over' 和 'across' 是介词，不是动词，因此不需要选中。"
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1615,
+      "verdicts": [
+        {
+          "index": 0,
+          "type": "highlight_span",
+          "ok": false,
+          "reason": "答案 'over' 和 'across' 不是动词，标准答案错误",
+          "correctAnswer": [
+            "jumps",
+            "runs"
+          ]
+        }
+      ],
+      "flagged": [
+        {
+          "index": 0,
+          "type": "highlight_span",
+          "ok": false,
+          "reason": "答案 'over' 和 'across' 不是动词，标准答案错误",
+          "correctAnswer": [
+            "jumps",
+            "runs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "read-dialogue-complete-r1",
+      "message": "给一段对话，让我从选项里选出最合适的下一句回应",
+      "genMs": 3345,
+      "card": {
+        "title": "情景对话补全",
+        "nodes": [
+          {
+            "type": "dialogue_complete",
+            "prompt": "你在咖啡店点餐，店员问你想要什么。",
+            "turns": [
+              {
+                "speaker": "店员",
+                "text": "Hi, what can I get for you today?"
+              }
+            ],
+            "options": [
+              "I'd like a large latte with oat milk, please.",
+              "Yes, I can.",
+              "The weather is nice today.",
+              "See you tomorrow."
+            ],
+            "answer": "I'd like a large latte with oat milk, please.",
+            "explanation": "这是最得体的回应，直接回答了店员的问题并明确了点餐需求。其他选项：'Yes, I can.' 答非所问；'The weather is nice today.' 话题不相关；'See you tomorrow.' 是告别语，不适合当前点餐场景。"
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1252,
+      "verdicts": [
+        {
+          "index": 0,
+          "type": "dialogue_complete",
+          "ok": true,
+          "reason": "答案客观正确，符合点餐语境，与题干自洽。"
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "translate-zh2en-r1",
+      "message": "汉译英练习：我每天走路去上学",
+      "genMs": 2151,
+      "card": {
+        "title": "汉译英练习",
+        "nodes": [
+          {
+            "type": "translate",
+            "direction": "zh2en",
+            "source": "我每天走路去上学",
+            "answer": "I walk to school every day.",
+            "accept": [
+              "I go to school on foot every day.",
+              "I walk to school each day.",
+              "Every day, I walk to school.",
+              "Each day, I go to school on foot.",
+              "I go to school on foot each day."
+            ]
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1038,
+      "verdicts": [
+        {
+          "index": 0,
+          "type": "translate",
+          "ok": true,
+          "reason": "",
+          "correctAnswer": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "vocab-hangman-r1",
+      "message": "来个猜单词游戏，根据提示逐个猜字母，别用完机会",
+      "genMs": 1447,
+      "card": {
+        "title": "猜词挑战：动物篇",
+        "nodes": [
+          {
+            "type": "hangman",
+            "word": "elephant",
+            "hint": "陆地上最大的哺乳动物",
+            "maxWrong": 6
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1799,
+      "verdicts": [
+        {
+          "index": 0,
+          "type": "hangman",
+          "ok": true,
+          "reason": "单词拼写、提示内容、游戏参数均客观正确",
+          "correctAnswer": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "gram-timed-r1",
+      "message": "限时抢答：倒计时里快速做选择题巩固时态",
+      "genMs": 3025,
+      "card": {
+        "title": "时态抢答冲刺",
+        "nodes": [
+          {
+            "type": "timed_challenge",
+            "prompt": "The train ______ at 8:15 tomorrow morning. Which tense is needed?",
+            "options": [
+              "will leave",
+              "leaves",
+              "is leaving",
+              "left"
+            ],
+            "answer": "leaves",
+            "seconds": 15
+          },
+          {
+            "type": "timed_challenge",
+            "prompt": "She ______ her homework before her mom came back.",
+            "options": [
+              "has finished",
+              "had finished",
+              "finished",
+              "was finishing"
+            ],
+            "answer": "had finished",
+            "seconds": 15
+          },
+          {
+            "type": "timed_challenge",
+            "prompt": "Look! The children ______ in the park right now.",
+            "options": [
+              "play",
+              "are playing",
+              "played",
+              "have played"
+            ],
+            "answer": "are playing",
+            "seconds": 15
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 0,
+      "verdicts": []
+    },
+    {
+      "id": "gram-ai-hint-r1",
+      "message": "给我一道难题，卡住时能逐步看提示，最后再揭示答案",
+      "genMs": 25016,
+      "card": {
+        "title": "难题渐进提示",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "试试这道有难度的题，卡住的话可以一步步看提示，最终揭示答案。",
+            "role": "title"
+          },
+          {
+            "type": "ai_hint",
+            "prompt": "在英语中，'He is one of the students who ___ hard-working.' 空格处应该用 is 还是 are？请说明原因。",
+            "hints": [
+              "先找到定语从句的先行词是谁。",
+              "先行词 students 是复数还是单数？关系代词 who 指代的是哪个词？",
+              "在 \"one of the + 复数名词 + who/that...\" 结构中，定语从句的谓语动词应与先行词（复数名词）保持一致，而非与 one 一致。"
+            ],
+            "answer": "are。原因：who 引导的定语从句修饰的是先行词 students（复数），所以谓语动词用 are，而非 is。整个句子意为「他是那些努力学习的学生之一」。"
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 0,
+      "verdicts": []
+    },
+    {
+      "id": "vocab-match-r1",
+      "message": "把英文单词和中文意思连线配对：apple-苹果、banana-香蕉、cat-猫",
+      "genMs": 5532,
+      "card": {
+        "title": "英文单词与中文意思连线配对",
+        "nodes": [
+          {
+            "type": "match",
+            "prompt": "请将左侧英文单词与右侧中文意思配对",
+            "pairs": [
+              {
+                "left": "apple",
+                "right": "苹果"
+              },
+              {
+                "left": "banana",
+                "right": "香蕉"
+              },
+              {
+                "left": "cat",
+                "right": "猫"
+              }
+            ]
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1411,
+      "verdicts": [
+        {
+          "index": 0,
+          "type": "match",
+          "ok": true,
+          "reason": "配对完全正确，无错误"
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "vocab-flashcard-r2",
+      "message": "帮我记这几个新单词：diligent、curious、generous，想要能点开看中文意思的记忆卡",
+      "genMs": 1825,
+      "card": {
+        "title": "新单词记忆卡",
+        "nodes": [
+          {
+            "type": "flashcard",
+            "cards": [
+              {
+                "front": "diligent",
+                "back": "勤奋的；刻苦的"
+              },
+              {
+                "front": "curious",
+                "back": "好奇的；求知欲强的"
+              },
+              {
+                "front": "generous",
+                "back": "慷慨的；大方的"
+              }
+            ]
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 0,
+      "verdicts": []
+    },
+    {
+      "id": "vocab-odd-one-out-r2",
+      "message": "apple、banana、carrot、orange 里哪个跟其他不是一类？出成一道练习",
+      "genMs": 3114,
+      "card": {
+        "title": "选异类",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "请选出与其他三项不属于同一类的词。",
+            "role": "title"
+          },
+          {
+            "type": "odd_one_out",
+            "items": [
+              "apple",
+              "banana",
+              "carrot",
+              "orange"
+            ],
+            "answer": "carrot",
+            "explanation": "apple（苹果）、banana（香蕉）、orange（橙子）都是水果（fruit），而 carrot（胡萝卜）是蔬菜（vegetable），不属于同类。"
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1164,
+      "verdicts": [
+        {
+          "index": 1,
+          "type": "odd_one_out",
+          "ok": true,
+          "reason": "",
+          "correctAnswer": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "vocab-categorize-r2",
+      "message": "把这些词按词性分到动词/名词/形容词三类：run、happiness、beautiful、eat、cat",
+      "genMs": 2694,
+      "card": {
+        "title": "词性分类练习",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "请将下列单词按词性分到「动词」、「名词」、「形容词」三类。",
+            "role": "title"
+          },
+          {
+            "type": "categorize",
+            "prompt": "把每个单词拖入对应的词性类别：",
+            "categories": [
+              {
+                "name": "动词",
+                "items": [
+                  "run",
+                  "eat"
+                ]
+              },
+              {
+                "name": "名词",
+                "items": [
+                  "happiness",
+                  "cat"
+                ]
+              },
+              {
+                "name": "形容词",
+                "items": [
+                  "beautiful"
+                ]
+              }
+            ],
+            "explanation": "• run(跑)、eat(吃) 是动作动词\n• happiness(幸福)、cat(猫) 是名词\n• beautiful(美丽的) 是形容词，用来修饰名词"
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1526,
+      "verdicts": [
+        {
+          "index": 1,
+          "type": "categorize",
+          "ok": true,
+          "reason": "分类正确，符合英语词性规范",
+          "correctAnswer": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "vocab-rank-order-r2",
+      "message": "把 freezing、cold、warm、hot 按从冷到热排序，做成练习",
+      "genMs": 3024,
+      "card": {
+        "title": "温度程度排序",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "请将下列温度词按从低到高（冷→热）的顺序排列。",
+            "role": "body"
+          },
+          {
+            "type": "rank_order",
+            "prompt": "从最冷到最热排列",
+            "items": [
+              "freezing",
+              "cold",
+              "warm",
+              "hot"
+            ],
+            "from": "最冷",
+            "to": "最热",
+            "explanation": "正确顺序：freezing（冰冻的，极冷）→ cold（冷的）→ warm（温暖的）→ hot（热的）。这四个词表示温度由低到高的递进关系。"
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1542,
+      "verdicts": [
+        {
+          "index": 1,
+          "type": "rank_order",
+          "ok": true,
+          "reason": "排序正确，符合常识温度递进关系",
+          "correctAnswer": "freezing, cold, warm, hot"
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "vocab-game-r2",
+      "message": "来个复习动物单词的小游戏，轻松一点",
+      "genMs": 11470,
+      "card": {
+        "title": "动物单词趣味复习",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "🐾 动物单词大挑战！轻松复习常见动物英文名~",
+            "role": "title"
+          },
+          {
+            "type": "pairs_memory",
+            "prompt": "翻牌配对：找到每个动物单词和它的中文意思！",
+            "pairs": [
+              {
+                "left": "cat",
+                "right": "猫"
+              },
+              {
+                "left": "dog",
+                "right": "狗"
+              },
+              {
+                "left": "bird",
+                "right": "鸟"
+              },
+              {
+                "left": "fish",
+                "right": "鱼"
+              },
+              {
+                "left": "rabbit",
+                "right": "兔子"
+              },
+              {
+                "left": "monkey",
+                "right": "猴子"
+              }
+            ]
+          },
+          {
+            "type": "odd_one_out",
+            "prompt": "下面哪个不属于同一类？",
+            "items": [
+              "cat",
+              "dog",
+              "bird",
+              "car"
+            ],
+            "answer": "car",
+            "explanation": "cat、dog、bird 都是动物，car 是交通工具，不属于动物类。"
+          },
+          {
+            "type": "word_scramble",
+            "word": "elephant",
+            "hint": "🐘 大型哺乳动物，有长鼻子",
+            "scrambled": [
+              "p",
+              "h",
+              "a",
+              "l",
+              "e",
+              "e",
+              "n",
+              "t"
+            ]
+          },
+          {
+            "type": "word_search",
+            "prompt": "在格子里找出这些动物单词！",
+            "grid": [
+              [
+                "C",
+                "A",
+                "T",
+                "D",
+                "O",
+                "G"
+              ],
+              [
+                "B",
+                "I",
+                "R",
+                "D",
+                "E",
+                "X"
+              ],
+              [
+                "F",
+                "I",
+                "S",
+                "H",
+                "Q",
+                "W"
+              ],
+              [
+                "R",
+                "A",
+                "B",
+                "B",
+                "I",
+                "T"
+              ],
+              [
+                "P",
+                "E",
+                "A",
+                "R",
+                "K",
+                "L"
+              ],
+              [
+                "M",
+                "O",
+                "N",
+                "K",
+                "E",
+                "Y"
+              ]
+            ],
+            "words": [
+              "CAT",
+              "DOG",
+              "BIRD",
+              "FISH",
+              "RABBIT",
+              "MONKEY"
+            ]
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 3,
+      "verifyMs": 4087,
+      "verdicts": [
+        {
+          "index": 2,
+          "type": "odd_one_out",
+          "ok": true,
+          "reason": "标准答案客观正确，car确实不是动物。"
+        },
+        {
+          "index": 3,
+          "type": "word_scramble",
+          "ok": true,
+          "reason": "字母可正确拼出elephant，与提示自洽。"
+        },
+        {
+          "index": 4,
+          "type": "word_search",
+          "ok": true,
+          "reason": "所有单词均存在于网格中，位置正确。"
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "spell-spelling-bee-r2",
+      "message": "听发音把单词 necessary 一个字母一个字母拼出来",
+      "genMs": 1376,
+      "card": {
+        "title": "听音拼写：necessary",
+        "nodes": [
+          {
+            "type": "spelling_bee",
+            "word": "necessary",
+            "hint": "adj. 必要的，必需的"
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 4668,
+      "verdicts": [
+        {
+          "index": 0,
+          "type": "spelling_bee",
+          "ok": true,
+          "reason": "单词拼写正确，符合用户需求。",
+          "correctAnswer": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "spell-scramble-r2",
+      "message": "把打乱的字母 u-t-b-e-a-f-i-l 拼回正确的单词",
+      "genMs": 2145,
+      "card": {
+        "title": "字母重组拼单词",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "请将下列打乱的字母拼回正确的英文单词：",
+            "role": "title"
+          },
+          {
+            "type": "word_scramble",
+            "word": "beautiful",
+            "hint": "美丽的",
+            "scrambled": [
+              "u",
+              "t",
+              "b",
+              "e",
+              "a",
+              "f",
+              "i",
+              "l"
+            ]
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1288,
+      "verdicts": [
+        {
+          "index": 1,
+          "type": "word_scramble",
+          "ok": true,
+          "reason": "单词正确，拼写与提示匹配，与打乱字母一致。"
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "spell-word-formation-r2",
+      "message": "构词练习：给 happy、care、success，让我写出对应的名词或形容词形式",
+      "genMs": 7116,
+      "card": {
+        "title": "构词练习：派生词转换",
+        "nodes": [
+          {
+            "type": "word_formation",
+            "prompt": "请将下列单词转换为对应的名词或形容词形式。",
+            "items": [
+              {
+                "base": "happy",
+                "target": "名词",
+                "answer": "happiness"
+              },
+              {
+                "base": "care",
+                "target": "形容词",
+                "answer": "careful"
+              },
+              {
+                "base": "success",
+                "target": "形容词",
+                "answer": "successful"
+              }
+            ],
+            "bank": [
+              "happiness",
+              "careful",
+              "successful",
+              "happily",
+              "careless",
+              "carelessness"
+            ]
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1426,
+      "verdicts": [
+        {
+          "index": 0,
+          "type": "word_formation",
+          "ok": true,
+          "reason": "所有答案语法正确且与题干要求一致",
+          "correctAnswer": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "listen-dictation-r2",
+      "message": "给我整句听写：读一句话，我把整句打出来",
+      "genMs": 1448,
+      "card": {
+        "title": "整句听写练习",
+        "nodes": [
+          {
+            "type": "dictation",
+            "text": "The quick brown fox jumps over the lazy dog."
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1896,
+      "verdicts": [
+        {
+          "index": 0,
+          "type": "dictation",
+          "ok": true,
+          "reason": "语法、拼写、标点均正确。"
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "gram-open-cloze-r2",
+      "message": "介词填空练习，不要给选项，我自己打字填：I'm good ___ English and I have ___ apple.",
+      "genMs": 1532,
+      "card": {
+        "title": "介词填空练习",
+        "nodes": [
+          {
+            "type": "open_cloze",
+            "prompt": "请打字填入正确的介词或冠词。",
+            "text": "I'm good ___ English and I have ___ apple.",
+            "answers": [
+              "at",
+              "an"
+            ]
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 4313,
+      "verdicts": [
+        {
+          "index": 0,
+          "type": "open_cloze",
+          "ok": true,
+          "reason": "答案正确，符合固定搭配和冠词使用。",
+          "correctAnswer": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "gram-cloze-select-r2",
+      "message": "完形填空，每个空给我三个选项选一个",
+      "genMs": 6329,
+      "card": {
+        "title": "完形填空练习",
+        "nodes": [
+          {
+            "type": "passage",
+            "text": "Last summer, my family and I went to the beach. We arrived early in the morning and the sun was already very bright. The water was calm and we could see some fish swimming (1)_____. My brother wanted to swim, but my mother told him to (2)_____ for a while because the water was still cold. After waiting, we all went into the water and had a great time. On our way home, we stopped at a small restaurant and had some (3)_____. It was a perfect day."
+          },
+          {
+            "type": "cloze_select",
+            "text": "We arrived early in the morning and the sun was already very bright. The water was calm and we could see some fish swimming (1)_____. My brother wanted to swim, but my mother told him to (2)_____ for a while because the water was still cold. After waiting, we all went into the water and had a great time. On our way home, we stopped at a small restaurant and had some (3)_____.",
+            "blanks": [
+              {
+                "options": [
+                  "clearly",
+                  "quickly",
+                  "beautifully"
+                ],
+                "answer": "clearly"
+              },
+              {
+                "options": [
+                  "wait",
+                  "play",
+                  "eat"
+                ],
+                "answer": "wait"
+              },
+              {
+                "options": [
+                  "lunch",
+                  "dinner",
+                  "breakfast"
+                ],
+                "answer": "lunch"
+              }
+            ],
+            "explanation": "1. 'clearly'表示'清楚地'，与看清水中的鱼搭配最自然。2. 妈妈让他'等(wait)'一会儿，因为水还冷，符合上下文。3. 文中提到'on our way home'（回家的路上），且早上出发，所以应该是吃'午饭(lunch)'。"
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1222,
+      "verdicts": [
+        {
+          "index": 1,
+          "type": "cloze_select",
+          "ok": true,
+          "reason": "标准答案客观正确，语法和语义均合理。"
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "gram-cloze-drag-r2",
+      "message": "一段话挖几个空，从下面一个共享词库点词填进去",
+      "genMs": 10975,
+      "card": {
+        "title": "共享词库完形填空",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "阅读下面短文，从下方词库中选出合适的词填入空格。",
+            "role": "body"
+          },
+          {
+            "type": "passage",
+            "text": "Last summer, my family decided to go on a trip to the mountains. We packed our bags and left early in the morning. The weather was __1__ at first, but it started to rain __2__. We found a small café and stayed there __3__ the rain stopped. After that, we continued our journey and finally __4__ the top of the mountain. The view was absolutely breathtaking."
+          },
+          {
+            "type": "cloze_drag",
+            "text": "Last summer, my family decided to go on a trip to the mountains. We packed our bags and left early in the morning. The weather was ___ at first, but it started to rain ___. We found a small café and stayed there ___ the rain stopped. After that, we continued our journey and finally ___ the top of the mountain. The view was absolutely breathtaking.",
+            "bank": [
+              "sunny",
+              "heavily",
+              "until",
+              "reached",
+              "cloudy",
+              "before",
+              "quickly",
+              "arrived"
+            ],
+            "answers": [
+              "sunny",
+              "heavily",
+              "until",
+              "reached"
+            ]
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 148421,
+      "verdicts": [
+        {
+          "index": 2,
+          "type": "cloze_drag",
+          "ok": true,
+          "reason": "所有答案语法正确、词义合理，与题干逻辑自洽"
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "gram-sentence-transform-r2",
+      "message": "把这句改成被动语态：He wrote the book.",
+      "genMs": 3019,
+      "card": {
+        "title": "被动语态改写",
+        "nodes": [
+          {
+            "type": "sentence_transform",
+            "prompt": "将下列句子改为被动语态",
+            "source": "He wrote the book.",
+            "answer": "The book was written by him.",
+            "accept": [
+              "The book was written by him.",
+              "The book was written by Him."
+            ],
+            "hint": "注意时态保持一般过去时，将宾语提前作主语，并使用 'by' 引出原主语。"
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 2002,
+      "verdicts": [
+        {
+          "index": 0,
+          "type": "sentence_transform",
+          "ok": true,
+          "reason": "",
+          "correctAnswer": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "gram-order-r2",
+      "message": "连词成句：to / school / I / go / every day",
+      "genMs": 3202,
+      "card": {
+        "title": "连词成句",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "将下列单词连成一句通顺的英文句子。",
+            "role": "title"
+          },
+          {
+            "type": "order",
+            "prompt": "请将单词连成完整句子：to / school / I / go / every day",
+            "items": [
+              "to",
+              "school",
+              "I",
+              "go",
+              "every day"
+            ],
+            "answer": "I go to school every day",
+            "explanation": "句子结构为：主语(I) + 谓语(go to) + 地点(school) + 时间状语(every day)。"
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1178,
+      "verdicts": [
+        {
+          "index": 1,
+          "type": "order",
+          "ok": true,
+          "reason": "标准答案语法正确，与题干单词完全匹配。"
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "gram-reorder-paragraph-r2",
+      "message": "把这几句打乱的句子排成通顺的一段话",
+      "genMs": 155732,
+      "card": {
+        "title": "语篇排序练习",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "请将下面打乱的句子排列成一个逻辑通顺的段落。",
+            "role": "body"
+          },
+          {
+            "type": "reorder_paragraph",
+            "prompt": "请按正确顺序点选下列句子，组成一段连贯的话。",
+            "sentences": [
+              "The sun was setting behind the mountains.",
+              "It painted the sky in shades of orange and pink.",
+              "Birds were flying back to their nests.",
+              "A cool breeze began to blow.",
+              "It was the end of a beautiful day."
+            ]
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1134,
+      "verdicts": [
+        {
+          "index": 1,
+          "type": "reorder_paragraph",
+          "ok": true,
+          "reason": "句子逻辑通顺，无拼写或语法错误。"
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "gram-true-false-r2",
+      "message": "出几道判断题，判断这些英语语法说法对还是错",
+      "genMs": 5769,
+      "card": {
+        "title": "英语语法判断题",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "判断下列关于英语语法的说法是否正确。",
+            "role": "title"
+          },
+          {
+            "type": "true_false",
+            "statements": [
+              {
+                "text": "名词可分为可数名词和不可数名词。",
+                "answer": true
+              },
+              {
+                "text": "形容词只能放在名词前面作定语。",
+                "answer": false
+              },
+              {
+                "text": "英语中的主语通常由名词或代词充当。",
+                "answer": true
+              },
+              {
+                "text": "所有动词的过去式都是在词尾加-ed。",
+                "answer": false
+              },
+              {
+                "text": "介词后面通常跟名词、代词或动名词。",
+                "answer": true
+              }
+            ],
+            "explanation": "1. 名词确实分为可数和不可数。2. 形容词也可作表语（如：He is happy）。3. 主语典型由名词/代词充当。4. 许多动词为不规则变化（如go→went）。5. 介词宾语需为名词性成分。"
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1158,
+      "verdicts": [
+        {
+          "index": 1,
+          "type": "true_false",
+          "ok": true,
+          "reason": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "gram-sentence-diagram-r2",
+      "message": "分析句子成分，标出 She reads books 里每个词是主语、谓语还是宾语",
+      "genMs": 2443,
+      "card": {
+        "title": "句子成分分析：She reads books",
+        "nodes": [
+          {
+            "type": "sentence_diagram",
+            "prompt": "请为句子中的每个词选择正确的语法成分标签：主语、谓语、宾语",
+            "sentence": "She reads books",
+            "labels": [
+              "主语",
+              "谓语",
+              "宾语"
+            ],
+            "items": [
+              {
+                "text": "She",
+                "label": "主语"
+              },
+              {
+                "text": "reads",
+                "label": "谓语"
+              },
+              {
+                "text": "books",
+                "label": "宾语"
+              }
+            ]
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 149195,
+      "verdicts": [
+        {
+          "index": 0,
+          "type": "sentence_diagram",
+          "ok": true,
+          "reason": "句子成分标注正确，主谓宾无误。",
+          "correctAnswer": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "gram-tokens-r2",
+      "message": "找出并点出这句里用错的词：She go to school every day.",
+      "genMs": 151741,
+      "card": {
+        "title": "找出并点出句子中的错误",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "请找出下面句子中用错的词（点击它）：",
+            "role": "title"
+          },
+          {
+            "type": "tokens",
+            "text": "She go to school every day.",
+            "correct": "She goes to school every day.",
+            "errors": [
+              "go"
+            ],
+            "explanation": "主语 She 是第三人称单数，一般现在时谓语动词要加 -s，应改为 goes。"
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1622,
+      "verdicts": [
+        {
+          "index": 1,
+          "type": "tokens",
+          "ok": true,
+          "reason": "标准答案和错误标记客观正确，与题干自洽。"
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "gram-error-correction-r2",
+      "message": "改错：把 She go to school yesterday 改成正确的整句写出来",
+      "genMs": 2982,
+      "card": {
+        "title": "句子改错",
+        "nodes": [
+          {
+            "type": "error_correction",
+            "prompt": "找出并改正句子中的时态错误",
+            "sentence": "She go to school yesterday",
+            "answer": "She went to school yesterday",
+            "accept": [
+              "She went to school yesterday."
+            ],
+            "explanation": "句中有明确的过去时间状语 yesterday，因此谓语动词应使用一般过去时 went，而不是一般现在时 go。"
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1425,
+      "verdicts": [
+        {
+          "index": 0,
+          "type": "error_correction",
+          "ok": true,
+          "reason": "",
+          "correctAnswer": "She went to school yesterday."
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "gram-proof-paragraph-r2",
+      "message": "高考短文改错：给一段话，每行可能有一处错，让我逐行改",
+      "genMs": 9667,
+      "card": {
+        "title": "高考短文改错练习",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "下面短文每行可能有一处错误（多词/少词/误用）。请你直接在原句上改正，每行最多改一处。"
+          },
+          {
+            "type": "proof_paragraph",
+            "prompt": "逐行改正下列短文中的错误：",
+            "lines": [
+              {
+                "text": "Last week I went to see a doctor, because I had a bad cold.",
+                "note": ""
+              },
+              {
+                "text": "The doctor ask me to take some medicine and have a good rest.",
+                "answer": "The doctor asked me to take some medicine and have a good rest.",
+                "note": "时态错误：ask→asked，与上下文过去时一致"
+              },
+              {
+                "text": "I followed his advices and took the medicine three times a day.",
+                "answer": "I followed his advice and took the medicine three times a day.",
+                "note": "名词单复数错误：advices→advice（不可数名词）"
+              },
+              {
+                "text": "Beside, I drank more water and ate more fruits.",
+                "answer": "Besides, I drank more water and ate more fruits.",
+                "note": "词性误用：Beside(介词，在…旁边)→Besides(副词，此外)"
+              },
+              {
+                "text": "My mother took care for me every day during my illness.",
+                "answer": "My mother took care of me every day during my illness.",
+                "note": "介词搭配错误：take care of 固定搭配"
+              },
+              {
+                "text": "After two week, I got well and returned to school.",
+                "answer": "After two weeks, I got well and returned to school.",
+                "note": "名词单复数错误：week→weeks（two后接复数）"
+              },
+              {
+                "text": "I felt very happy because of I could study with my classmates again.",
+                "answer": "I felt very happy because I could study with my classmates again.",
+                "note": "连词误用：because of后接名词/代词，此处接从句应用because"
+              }
+            ]
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1729,
+      "verdicts": [
+        {
+          "index": 1,
+          "type": "proof_paragraph",
+          "ok": true,
+          "reason": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "gram-fill-table-r2",
+      "message": "动词过去式表格填空：give、go、eat，把过去式那一列挖空让我填",
+      "genMs": 1849,
+      "card": {
+        "title": "动词过去式填空",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "请根据动词原形，填写正确的过去式。",
+            "role": "title"
+          },
+          {
+            "type": "fill_table",
+            "title": "动词过去式",
+            "headers": [
+              "原形",
+              "过去式"
+            ],
+            "rows": [
+              [
+                "give",
+                "gave"
+              ],
+              [
+                "go",
+                "went"
+              ],
+              [
+                "eat",
+                "ate"
+              ]
+            ],
+            "blanks": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 4706,
+      "verdicts": [
+        {
+          "index": 1,
+          "type": "fill_table",
+          "ok": true,
+          "reason": "",
+          "correctAnswer": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "listen-fill-r2",
+      "message": "听一句话，把缺的词从词库里点出来填空",
+      "genMs": 2326,
+      "card": {
+        "title": "听力填空练习",
+        "nodes": [
+          {
+            "type": "listen_fill",
+            "audioText": "I need to book a flight to New York for next Monday.",
+            "text": "I need to ___ a flight to New York for next ___.",
+            "bank": [
+              "book",
+              "look",
+              "Monday",
+              "morning",
+              "Tuesday",
+              "afternoon"
+            ],
+            "answers": [
+              "book",
+              "Monday"
+            ]
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 6132,
+      "verdicts": [
+        {
+          "index": 0,
+          "type": "listen_fill",
+          "ok": true,
+          "reason": "标准答案与音频文本及词库匹配，无拼写或事实错误"
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "listen-cloze-r2",
+      "message": "听一句话，把缺的词自己打字填出来，不给词库",
+      "genMs": 2135,
+      "card": {
+        "title": "听力填空·打字版",
+        "nodes": [
+          {
+            "type": "listen_cloze",
+            "audioText": "I have a dream that one day this nation will rise up and live out the true meaning of its creed.",
+            "text": "I have a dream that one day this nation will ___ up and live out the true meaning of its creed.",
+            "answers": [
+              "rise"
+            ]
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1747,
+      "verdicts": [
+        {
+          "index": 0,
+          "type": "listen_cloze",
+          "ok": true,
+          "reason": "标准答案与音频文本完全一致，填空合理。",
+          "correctAnswer": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "listen-audio-choice-r2",
+      "message": "辨音练习：读一个词，我判断听到的是 ship 还是 sheep",
+      "genMs": 6858,
+      "card": {
+        "title": "辨音练习：ship vs sheep",
+        "nodes": [
+          {
+            "type": "audio_choice",
+            "audioText": "ship",
+            "prompt": "你听到的是哪个词？",
+            "options": [
+              "ship",
+              "sheep"
+            ],
+            "answer": "ship",
+            "explanation": "ship 的元音是短元音 /ɪ/，听起来短促；sheep 的元音是长元音 /iː/，听起来拉长。注意区分短元音和长元音的差异。"
+          },
+          {
+            "type": "audio_choice",
+            "audioText": "sheep",
+            "prompt": "你听到的是哪个词？",
+            "options": [
+              "ship",
+              "sheep"
+            ],
+            "answer": "sheep",
+            "explanation": "sheep 的元音是长元音 /iː/，舌位较高且拉长；ship 的元音是短元音 /ɪ/，舌位略低且短促。多听多对比，培养对最小对立对的敏感度。"
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 2,
+      "verifyMs": 13033,
+      "verdicts": [
+        {
+          "index": 0,
+          "type": "audio_choice",
+          "ok": true,
+          "reason": ""
+        },
+        {
+          "index": 1,
+          "type": "audio_choice",
+          "ok": true,
+          "reason": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "speak-score-r2",
+      "message": "我要练口语跟读，读一句话给我发音评分",
+      "genMs": 30743,
+      "card": {
+        "title": "口语跟读练习",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "请朗读以下句子，系统将为您的发音评分。",
+            "role": "body"
+          },
+          {
+            "type": "speak_score",
+            "text": "The quick brown fox jumps over the lazy dog."
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 0,
+      "verdicts": []
+    },
+    {
+      "id": "speak-roleplay-r2",
+      "message": "模拟在咖啡店点单，跟我多轮对话练口语",
+      "genMs": 11999,
+      "card": {
+        "title": "咖啡店点单口语对话",
+        "nodes": [
+          {
+            "type": "roleplay_turn",
+            "scenario": "你是咖啡店店员，顾客来点单，用英语完成一次完整的点单过程。",
+            "opening": "Hello! Welcome to Café Delight. What can I get for you today?",
+            "goal": "用英语流利地点一杯饮品并完成付款",
+            "turns": 6
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 0,
+      "verdicts": []
+    },
+    {
+      "id": "speak-stress-r2",
+      "message": "练单词重音：banana 的重音在哪个音节",
+      "genMs": 1572,
+      "card": {
+        "title": "banana 的重音",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "请标出单词 **banana** 的重读音节。",
+            "role": "title"
+          },
+          {
+            "type": "stress_mark",
+            "word": "banana",
+            "syllables": [
+              "ba",
+              "na",
+              "na"
+            ],
+            "stress": 2
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 8079,
+      "verdicts": [
+        {
+          "index": 1,
+          "type": "stress_mark",
+          "ok": true,
+          "reason": "重音位置标注正确"
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "read-tfng-r2",
+      "message": "给一段短文，判断每句是 True、False 还是 Not Given",
+      "genMs": 16229,
+      "card": {
+        "title": "阅读判断练习：True / False / Not Given",
+        "nodes": [
+          {
+            "type": "passage",
+            "text": "The Great Barrier Reef, located off the coast of Queensland, Australia, is the world's largest coral reef system. It stretches over 2,300 kilometres and is composed of over 2,900 individual reef systems. The reef supports a huge diversity of life, including more than 1,500 species of fish and 400 types of coral. In recent years, rising ocean temperatures have caused widespread coral bleaching events, threatening the reef's ecosystem. Scientists are actively researching methods to help the reef recover and adapt to climate change."
+          },
+          {
+            "type": "tfng",
+            "prompt": "根据上方短文，判断下列陈述是 True（与原文一致）、False（与原文矛盾）还是 Not Given（原文未提及）。",
+            "statements": [
+              {
+                "text": "The Great Barrier Reef is located near the coast of New South Wales.",
+                "answer": "false"
+              },
+              {
+                "text": "The reef system includes over 2,900 individual reefs.",
+                "answer": "true"
+              },
+              {
+                "text": "More than 2,000 species of fish live in the reef.",
+                "answer": "false"
+              },
+              {
+                "text": "Coral bleaching has been caused by rising ocean temperatures.",
+                "answer": "true"
+              },
+              {
+                "text": "The reef will fully recover within the next decade.",
+                "answer": "not_given"
+              }
+            ],
+            "explanation": "False 与 Not Given 的关键区别：False 是原文明确矛盾（如地点、数字不符）；Not Given 是原文根本没提到这个信息（如未来预测）。"
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 2144,
+      "verdicts": [
+        {
+          "index": 1,
+          "type": "tfng",
+          "ok": false,
+          "reason": "原文应提及大堡礁位于昆士兰州，而非新南威尔士州，但答案应为True/False取决于原文。此答案依赖原文内容，无法客观判断。",
+          "correctAnswer": "需根据原文判断"
+        }
+      ],
+      "flagged": [
+        {
+          "index": 1,
+          "type": "tfng",
+          "ok": false,
+          "reason": "原文应提及大堡礁位于昆士兰州，而非新南威尔士州，但答案应为True/False取决于原文。此答案依赖原文内容，无法客观判断。",
+          "correctAnswer": "需根据原文判断"
+        }
+      ]
+    },
+    {
+      "id": "read-match-headings-r2",
+      "message": "雅思阅读：给几段文字和一批小标题，为每段选最合适的标题",
+      "genMs": 19992,
+      "card": {
+        "title": "IELTS Reading - Matching Headings",
+        "nodes": [
+          {
+            "type": "passage",
+            "text": "A. The world's rainforests are disappearing at an alarming rate. Every minute, an area the size of 40 football fields is cleared, primarily for agriculture and logging. This deforestation has severe consequences for the planet's climate, biodiversity, and the livelihoods of indigenous communities.\n\nB. Scientists are developing new methods to monitor and protect these vital ecosystems. Satellite technology now allows for near-real-time tracking of forest cover changes, enabling authorities to detect illegal logging activities quickly. Additionally, community-based conservation programs are empowering local populations to manage their resources sustainably.\n\nC. Despite these efforts, significant challenges remain. Political will and funding are often insufficient to enforce environmental laws. Furthermore, the economic drivers of deforestation, such as demand for palm oil and beef, are powerful and deeply embedded in global supply chains."
+          },
+          {
+            "type": "match_headings",
+            "prompt": "Read the three paragraphs (A, B, C) and choose the most suitable heading for each from the list below.",
+            "paragraphs": [
+              {
+                "label": "A",
+                "text": "The world's rainforests are disappearing at an alarming rate. Every minute, an area the size of 40 football fields is cleared, primarily for agriculture and logging. This deforestation has severe consequences for the planet's climate, biodiversity, and the livelihoods of indigenous communities.",
+                "answer": "The Scale of Rainforest Destruction and Its Impacts"
+              },
+              {
+                "label": "B",
+                "text": "Scientists are developing new methods to monitor and protect these vital ecosystems. Satellite technology now allows for near-real-time tracking of forest cover changes, enabling authorities to detect illegal logging activities quickly. Additionally, community-based conservation programs are empowering local populations to manage their resources sustainably.",
+                "answer": "Technological and Community-Based Solutions"
+              },
+              {
+                "label": "C",
+                "text": "Despite these efforts, significant challenges remain. Political will and funding are often insufficient to enforce environmental laws. Furthermore, the economic drivers of deforestation, such as demand for palm oil and beef, are powerful and deeply embedded in global supply chains.",
+                "answer": "Persistent Obstacles to Conservation"
+              }
+            ],
+            "headings": [
+              "The Scale of Rainforest Destruction and Its Impacts",
+              "Technological and Community-Based Solutions",
+              "Persistent Obstacles to Conservation",
+              "Historical Background of Deforestation",
+              "Future Projections for Global Forests"
+            ],
+            "explanation": "A describes the rapid rate and major impacts (climate, biodiversity, communities) → matches 'Scale... and Impacts'. B details new monitoring tech and community programs → matches 'Technological and Community-Based Solutions'. C states ongoing challenges like weak laws and economic drivers → matches 'Persistent Obstacles'. The distractors 'Historical Background' and 'Future Projections' are not supported by the text."
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1281,
+      "verdicts": [
+        {
+          "index": 1,
+          "type": "match_headings",
+          "ok": true,
+          "reason": "所有段落答案准确对应内容，无误。"
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "read-match-info-r2",
+      "message": "雅思阅读：判断每条信息分别出现在 A/B/C 哪一段",
+      "genMs": 19011,
+      "card": {
+        "title": "雅思阅读：信息匹配练习",
+        "nodes": [
+          {
+            "type": "passage",
+            "text": "(A) The development of renewable energy sources has accelerated in recent years, driven by both environmental concerns and economic incentives. Solar and wind power capacity has doubled in many countries since 2015, with costs falling dramatically. This shift has also created new jobs in manufacturing and installation sectors.\n\n(B) Despite the growth in renewables, fossil fuels still dominate the global energy mix. Coal remains the primary source of electricity in several major economies, particularly in Asia. The transition faces significant challenges, including grid infrastructure limitations and the need for energy storage solutions.\n\n(C) Looking ahead, experts predict that by 2040, renewable sources could supply over 60% of the world's electricity. However, this will require massive investments in smart grid technology and international cooperation on energy standards. The social impact of phasing out traditional energy industries is also a key consideration."
+          },
+          {
+            "type": "match_info",
+            "prompt": "以下每条信息分别出现在 A/B/C 哪一段？请将每条信息匹配到正确的段落标签。",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ],
+            "statements": [
+              {
+                "text": "Renewable energy costs have decreased significantly.",
+                "answer": "A"
+              },
+              {
+                "text": "Coal is still the main electricity source in some Asian countries.",
+                "answer": "B"
+              },
+              {
+                "text": "By 2040, renewables may provide over 60% of global electricity.",
+                "answer": "C"
+              },
+              {
+                "text": "Grid infrastructure is a major obstacle to the energy transition.",
+                "answer": "B"
+              },
+              {
+                "text": "The phase-out of traditional energy has social consequences.",
+                "answer": "C"
+              },
+              {
+                "text": "Renewable energy development is driven by environmental and financial factors.",
+                "answer": "A"
+              }
+            ],
+            "explanation": "请注意：A段聚焦可再生能源的发展与现状；B段讨论化石燃料的持续主导及过渡挑战；C段展望未来预测及所需条件。细节定位时需严格依据原文对应句。"
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 4577,
+      "verdicts": [
+        {
+          "index": 1,
+          "type": "match_info",
+          "ok": true,
+          "reason": "无客观错误，各答案与题干及解释逻辑自洽。",
+          "correctAnswer": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "read-highlight-span-r2",
+      "message": "在这段话里把所有动词都圈出来",
+      "genMs": 4006,
+      "card": {
+        "title": "动词圈选练习",
+        "nodes": [
+          {
+            "type": "highlight_span",
+            "prompt": "圈出下面这段话里的所有动词",
+            "text": "My sister often reads books in the library. She enjoys learning new things and writes stories every weekend.",
+            "answers": [
+              "reads",
+              "enjoys",
+              "learning",
+              "writes",
+              "is"
+            ],
+            "explanation": "这段话中的动词包括：reads（阅读，一般现在时第三人称单数）、enjoys（享受）、learning（学习，动名词/现在分词作宾语）、writes（写）。注意 learning 虽然在 enjoy 后面作宾语，但仍是动词的一种形式。"
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 3621,
+      "verdicts": [
+        {
+          "index": 0,
+          "type": "highlight_span",
+          "ok": false,
+          "reason": "标准答案包含非动词'is'，原文中并未出现。",
+          "correctAnswer": "['reads','enjoys','learning','writes']"
+        }
+      ],
+      "flagged": [
+        {
+          "index": 0,
+          "type": "highlight_span",
+          "ok": false,
+          "reason": "标准答案包含非动词'is'，原文中并未出现。",
+          "correctAnswer": "['reads','enjoys','learning','writes']"
+        }
+      ]
+    },
+    {
+      "id": "read-dialogue-complete-r2",
+      "message": "给一段对话，让我从选项里选出最合适的下一句回应",
+      "genMs": 3956,
+      "card": {
+        "title": "Choose the Best Response",
+        "nodes": [
+          {
+            "type": "dialogue_complete",
+            "prompt": "Read the dialogue and choose the most appropriate next response.",
+            "turns": [
+              {
+                "speaker": "A",
+                "text": "Excuse me, do you know where the nearest library is?"
+              },
+              {
+                "speaker": "B",
+                "text": "Sure, it's just around the corner. Would you like me to show you the way?"
+              }
+            ],
+            "options": [
+              "Yes, that would be great! Thank you so much.",
+              "I'm not really looking for a library right now.",
+              "How many books can I borrow at a time?",
+              "I think libraries are outdated."
+            ],
+            "answer": "Yes, that would be great! Thank you so much.",
+            "explanation": "The context shows A asking for directions and B offering to help. The most polite and natural response is to accept the offer gratefully. The other options are either off-topic, rude, or irrelevant to the situation."
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "error": "Unexpected non-whitespace character after JSON at position 91 (line 1 column 92)"
+    },
+    {
+      "id": "translate-zh2en-r2",
+      "message": "汉译英练习：我每天走路去上学",
+      "genMs": 2232,
+      "card": {
+        "title": "汉译英练习",
+        "nodes": [
+          {
+            "type": "translate",
+            "direction": "zh2en",
+            "source": "我每天走路去上学",
+            "answer": "I walk to school every day.",
+            "accept": [
+              "I go to school on foot every day.",
+              "I walk to school each day."
+            ],
+            "hint": "注意主语、时态（一般现在时）和地点状语、频率状语的顺序。"
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 2955,
+      "verdicts": [
+        {
+          "index": 0,
+          "type": "translate",
+          "ok": true,
+          "reason": "标准答案和可接受答案语法正确，与题干自洽。",
+          "correctAnswer": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "vocab-hangman-r2",
+      "message": "来个猜单词游戏，根据提示逐个猜字母，别用完机会",
+      "genMs": 1828,
+      "card": {
+        "title": "猜单词游戏",
+        "nodes": [
+          {
+            "type": "hangman",
+            "word": "elephant",
+            "hint": "一种大型哺乳动物，有长长的鼻子",
+            "maxWrong": 6
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1489,
+      "verdicts": [
+        {
+          "index": 0,
+          "type": "hangman",
+          "ok": true,
+          "reason": "",
+          "correctAnswer": ""
+        }
+      ],
+      "flagged": []
+    },
+    {
+      "id": "gram-timed-r2",
+      "message": "限时抢答：倒计时里快速做选择题巩固时态",
+      "genMs": 3508,
+      "card": {
+        "title": "时态限时抢答",
+        "nodes": [
+          {
+            "type": "timed_challenge",
+            "prompt": "She ______ (go) to the park yesterday.",
+            "options": [
+              "went",
+              "goes",
+              "has gone",
+              "is going"
+            ],
+            "answer": "went",
+            "seconds": 15
+          },
+          {
+            "type": "timed_challenge",
+            "prompt": "They ______ (play) football when it started to rain.",
+            "options": [
+              "play",
+              "are playing",
+              "were playing",
+              "have played"
+            ],
+            "answer": "were playing",
+            "seconds": 15
+          },
+          {
+            "type": "timed_challenge",
+            "prompt": "I ______ (finish) my homework by 9 p.m. last night.",
+            "options": [
+              "finished",
+              "had finished",
+              "have finished",
+              "will finish"
+            ],
+            "answer": "had finished",
+            "seconds": 15
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 0,
+      "verdicts": []
+    },
+    {
+      "id": "gram-ai-hint-r2",
+      "message": "给我一道难题，卡住时能逐步看提示，最后再揭示答案",
+      "genMs": 10938,
+      "card": {
+        "title": "英语难题挑战",
+        "nodes": [
+          {
+            "type": "ai_hint",
+            "prompt": "请将以下句子转换为被动语态：\n\nThe researchers have discovered a new species of butterfly in the Amazon rainforest.",
+            "hints": [
+              "首先找出句子的主语、谓语和宾语。",
+              "被动语态的基本结构是：宾语 + be动词 + 过去分词 + by + 主语。",
+              "原句的时态是现在完成时，所以被动语态中的 be 动词也应保持现在完成时（have/has been + 过去分词）。",
+              "注意：当主语是 researchers（复数）时，by后面应该用 them 还是 the researchers？"
+            ],
+            "answer": "A new species of butterfly has been discovered in the Amazon rainforest by the researchers."
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 0,
+      "verdicts": []
+    },
+    {
+      "id": "vocab-match-r2",
+      "message": "把英文单词和中文意思连线配对：apple-苹果、banana-香蕉、cat-猫",
+      "genMs": 2981,
+      "card": {
+        "title": "英文单词与中文意思配对",
+        "nodes": [
+          {
+            "type": "text",
+            "text": "请将左侧英文单词与右侧正确的中文意思配对。",
+            "role": "title"
+          },
+          {
+            "type": "match",
+            "prompt": "将英文单词与对应中文意思连线",
+            "pairs": [
+              {
+                "left": "apple",
+                "right": "苹果"
+              },
+              {
+                "left": "banana",
+                "right": "香蕉"
+              },
+              {
+                "left": "cat",
+                "right": "猫"
+              }
+            ],
+            "explanation": "apple 是苹果，banana 是香蕉，cat 是猫。这些是基础的名词词汇，注意拼写和发音。"
+          }
+        ]
+      },
+      "microOk": true,
+      "gradableCount": 1,
+      "verifyMs": 1678,
+      "verdicts": [
+        {
+          "index": 1,
+          "type": "match",
+          "ok": true,
+          "reason": "",
+          "correctAnswer": ""
+        }
+      ],
+      "flagged": []
+    }
+  ]
+}

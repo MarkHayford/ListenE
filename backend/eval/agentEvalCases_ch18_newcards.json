@@ -1,0 +1,70 @@
+[
+  {
+    "id": "nc-ethics-1",
+    "message": "给我一个英语道德两难思辨练习，含一个情境和几个反思问题",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["ethics"],
+    "forbidComponents": ["question_set"],
+    "minCounts": { "ethics": 2 },
+    "rubric": "ethics 组件：text 放英文道德两难情境，items 放 2-4 个英文反思问题；不要混入题组/词汇/语法"
+  },
+  {
+    "id": "nc-ethics-2",
+    "message": "用英语做一个道德思辨讨论卡，讨论价值观",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["ethics"],
+    "forbidComponents": ["question_set"],
+    "rubric": "ethics 组件，贴主题、可渲染，不要题组"
+  },
+  {
+    "id": "nc-debate-1",
+    "message": "给我一个英语辩论练习，要有正反方观点",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["debate"],
+    "forbidComponents": ["question_set"],
+    "minCounts": { "debate": 2 },
+    "rubric": "debate 组件：text 放英文辩题 Motion，items 放正反双方要点(For:/Against:)，explanation 提示选边给理由"
+  },
+  {
+    "id": "nc-debate-2",
+    "message": "用英语做一个 pros and cons 论证卡，关于在校使用手机",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["debate"],
+    "forbidComponents": ["question_set"],
+    "rubric": "debate 组件，正反方要点齐全，贴主题"
+  },
+  {
+    "id": "nc-errorhunt-1",
+    "message": "give me a proofreading passage with several errors to spot",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["error_hunt"],
+    "forbidComponents": ["question_set"],
+    "minCounts": { "error_hunt": 2 },
+    "rubric": "error_hunt 组件：text 放含错英文短文，items 放每处 错->对，explanation 提示先找错再改；篇章级校对"
+  },
+  {
+    "id": "nc-errorhunt-2",
+    "message": "出一段英文挑错练习，找出语法错误并改正",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["error_hunt"],
+    "forbidComponents": ["question_set"],
+    "rubric": "error_hunt 篇章级校对，错->对清单齐全"
+  },
+  {
+    "id": "nc-story-1",
+    "message": "给我一个英语故事创作练习，给我写作情境和要求",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["storytelling"],
+    "forbidComponents": ["question_set"],
+    "minCounts": { "storytelling": 1 },
+    "rubric": "storytelling 组件：text 放英文写作情境/开头，items 放词语/结构要求，explanation 提示写 3-5 句"
+  },
+  {
+    "id": "nc-story-2",
+    "message": "用英语编个故事写作练习，给我开头和限制条件",
+    "expectIntent": "practice_card",
+    "mustHaveComponents": ["storytelling"],
+    "forbidComponents": ["question_set"],
+    "rubric": "storytelling 创意写作，情境+要求齐全"
+  }
+]
